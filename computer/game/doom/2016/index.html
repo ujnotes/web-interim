@@ -66,9 +66,9 @@ var trackOutboundLink = function(title, url) {
 		enable_page_level_ads: true
 	});
 </script>
-		<script src='https://cdn.ravenjs.com/3.22.2/raven.min.js' crossorigin='anonymous'
+		<script src='https://browser.sentry-cdn.com/4.0.6/bundle.min.js' crossorigin='anonymous'
 ></script>
-		<script>Raven.config('https://52c8382bd8f04bf19da361ac5905e237@sentry.io/187146').install();
+		<script>Sentry.init({ dsn: 'https://52c8382bd8f04bf19da361ac5905e237@sentry.io/187146' });
 </script>
 		<script src='//apis.google.com/js/platform.js' async defer></script>
 		<script src='//platform.twitter.com/widgets.js' async></script>
@@ -158,10 +158,6 @@ blockquote {
 	overflow: hidden
 }
 /* 
-.content {
-	font-size: 16px
-}
-
 .content ol {
 	padding-left: 20px
 }
@@ -177,7 +173,7 @@ blockquote {
 */
 #content p.first-letter-high::first-letter {
 	color: #69b7cf;
-	font-size: 240%;
+	font-size: 2.4em;
 	padding-right: 2px;
 }
 
@@ -414,7 +410,7 @@ h1#title {
 
 #updated {
 	display: inline-block;
-	font-size: 12px;
+	font-size: 0.75em;
 	color: #bbbbbb!important;
 	will-change: opacity
 }
@@ -566,7 +562,7 @@ body {
 
 #footer-wrapper {
 	text-align: center;
-	font-size: 14px;
+	font-size: 0.875em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: -215px;
@@ -628,7 +624,7 @@ body {
 	float: left;
 	margin-top: 49px;
 	text-align: right;
-	font-size: 18px;
+	font-size: 1.125em;
 	color: #555;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.1)
 }
@@ -644,7 +640,7 @@ body {
 
 #notification {
 	display: inline-block;
-	font-size: 12px;
+	font-size: 0.75em;
 	color: #aaa!important;
 	background: yellow;
 	padding: 10px;
@@ -824,7 +820,7 @@ span.header-logo {
 
 .item_block div, .item_block_text div {
 	margin-left: 28px;
-	font-size: 15px;
+	font-size: 0.9375em;
 	vertical-align: middle;
 	cursor: pointer;
 	color: #69b7cf;
