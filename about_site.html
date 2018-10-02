@@ -546,6 +546,11 @@ body {
 .grow:hover {
 	transform: scale(1.1);	
 }
+@media (max-width: 540px) {
+	html {
+		margin-left: 0;
+	}
+}
 @font-face {
 	font-family: 'Abel';
 	font-style: normal;
@@ -875,6 +880,15 @@ span.header-logo {
 .sidebar-nav-group.page-list > .item_block_container, .sidebar-nav-group.page-list > .item_block {
 	margin: 8px 10px !important;
 }
+@media (max-width: 400px) {
+	.sidebar-nav-norm.item_block-placeholder {
+		display: none;
+	}
+	.sidebar-nav-norm.item_block-placeholder:first-of-type {
+		display: inline-block;
+		height: 40px !important;
+	}
+}
 @media (max-width: 354px) {
 	#nav-list.page-list > .item_block_container {
 		float: none;
@@ -1035,7 +1049,6 @@ span.header-logo {
 #canvas-main {
 	overflow: hidden;
 	width: 50%;
-	display: inline-block;
 	transform: translate(-100%,0);
 	transition: all 1s;
 	will-change: transform

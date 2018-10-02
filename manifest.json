@@ -1,6 +1,6 @@
 {
-	"name": "Ujjwal Singh's notes: Ujnotes",
-	"short_name": "Ujnotes",
+	"name": "WCodes - encode with words",
+	"short_name": "WCodes",
 	"icons": [
 		{
 			"src": "launcher-icon-0-75x.png",
@@ -43,6 +43,6 @@
 	"display": "standalone",
 	"related_applications": [{
 		"platform": "web",
-		"url": "https://ujnotes.com"
+		"url": "https://wcodes.org"
 	}]
 }
