@@ -5,7 +5,7 @@
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' >
 	<meta name='title' content="Ujnotes" >
 	<meta name='author' content="Ujjwal Singh" >
-	<meta name='viewport' content="width=device-width, initial-scale=1.0" >
+	<meta name='viewport' content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
 	<meta itemprop="name" content="Ujnotes" />
 <meta itemprop="description" content="Frequently asked questions about this project" />
 <meta itemprop="image" content="https://ujnotes.com/social.png" />
@@ -155,7 +155,9 @@ blockquote {
 #message {
 	padding: 0 6px 18px;
 	clear: both;
-	overflow: hidden
+	overflow: hidden;
+	padding-left: env(safe-area-inset-left);
+	padding-right: env(safe-area-inset-right);
 }
 /* 
 .content ol {
