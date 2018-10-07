@@ -109,6 +109,8 @@ var activateMain = function() {
 	replaceState(curTab, document.getElementById('title').innerText);
 	activateMainFn();	
 }
+var curRequestId = 0;
+
 function loadCanvasI(m) {
 	loadCanvasH(this);
 	return false;
@@ -160,9 +162,10 @@ function loadCanvas(target, title) {
 	else { // IE6, IE5
 		xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
 	}
+	xmlhttp.requestId = ++curRequestId;
 	xmlhttp.onreadystatechange = function() {
 
-		if (xmlhttp.readyState == 4) {
+		if (xmlhttp.readyState == 4 && xmlhttp.requestId == curRequestId) {
 			if(target === gTarget) {
 				var canvas_main = document.getElementById('canvas-main');
 				switch (xmlhttp.status) {
