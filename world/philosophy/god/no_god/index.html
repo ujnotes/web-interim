@@ -127,6 +127,13 @@ h1 {
 img {
 	max-width: 100%;
 }
+@media (max-width: 540px) {
+	h1, h2, h3, h4, h5, h6 {
+		padding-left: 5px;
+		padding-right: 5px
+	}
+
+}
 pre {
 	font-family: monospace
 }
@@ -144,7 +151,7 @@ code.inline {
 code.block {
 	display: block;
 	padding: 8px 14px;
-	background-image: -webkit-linear-gradient(left,#f2f2f2,transparent)
+	background: linear-gradient(to right, #f2f2f2 20%, white);
 }
 
 blockquote {
@@ -190,14 +197,23 @@ blockquote {
 	height: 0
 }
 .cover-image img {
+	width: 100%;
 	border-radius: 8px
 }
 
 .cover-image {
 	height: 0;
+	margin: 0px 2px 1px 2px;
 	border-radius: 8px;
-	-webkit-box-shadow: 0 1px 10px #afafaf;
-	-moz-box-shadow: 0 1px 10px #afafaf
+	background: #DDDDDD;
+	box-shadow: 0 1px 10px #C7C7C7
+}
+@media (max-width: 540px) {
+
+	.cover-image {
+		margin-right: 3px
+	}
+
 }
 .indent-10 {
 	padding-left: 10px;
@@ -255,7 +271,7 @@ p.content-list-example {
 }
 
 .content-list > li {
-	background-color: transparent;
+	background-color: white;
 	vertical-align: baseline;
 	padding-bottom: 14px;
 }
@@ -763,7 +779,7 @@ body {
 	height: 32px;
 	margin-top: -5px;
 	overflow: hidden;
-	
+
 	border-style: solid;
 	border-width: 1px;
 	border-top-color: white;
@@ -771,9 +787,9 @@ body {
 	border-bottom-right-radius: 4px;
 
 	color: #69b7cf;
-	background-color: white;
-	border-color: #eee;
-	
+	background-color: #f6f6f6;
+	border-color: #f4f4f4;
+
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
@@ -807,10 +823,10 @@ body {
 	border-width: 1px;
 	border-radius: 5px;
 
-	background: white;
-	border-color: #ddd;
+	background: #f6f6f6;
+	border-color: #f4f4f4;
 	color: #69b7cf;
-	
+
 	display: inline-block;
 	cursor: pointer;
 	text-decoration: none;
@@ -821,7 +837,7 @@ body {
 
 .item_block div, .item_block_text div {
 	margin-left: 28px;
-	font-size: 0.9375em;
+	font-size: 1em;
 	vertical-align: middle;
 	cursor: pointer;
 	color: #69b7cf;
@@ -893,7 +909,7 @@ body {
 }
 
 @media (max-width: 540px) {
-	
+
 	#main-wrapper {
 		padding:0!important
 	}
@@ -911,21 +927,22 @@ body {
 	}
 
 	#content p {
-		padding-left: 6px
+		padding-left: 6px;
+		padding-right: 6px
 	}
 
 	#nav-list {
 		max-width: 354px;
 	}
-	
+
 	#nav-list.page-list > .item_block_container {
 		margin: 10px 6px;
 	}
-	
+
 	.item_block-disabled {
 		display: none;
 	}
-	
+
 	#fb_components {
 		margin-left: 4px!important
 	}
@@ -937,7 +954,7 @@ body {
 	#home-menu > div.sidebar-nav-group {
 		padding-left: 12px!important
 	}
-	
+
 }
 
 @media (max-width: 768px) {
@@ -1204,8 +1221,8 @@ body {
 			</a>
 		</div>
 		<div id='header-logo' class='XURL' data-target='root' data-title=''>
-			<a id='header-logo-href' href='/'>
-				<div id='header-logo-image' class='header-logo image'><svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
+			<a id='header-logo-image' href='/' class='header-logo image'>
+				<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
 	 viewBox="-185 383.9 192 74">
 	<g fill='#56B4D1'>
 		<path d="M-150.1,430.1c-0.5,1.3-1.3,2.3-2.2,3.3s-2,1.7-3.3,2.2s-2.6,0.8-4,0.8h-3c-1.4,0-2.8-0.3-4-0.8
@@ -1245,7 +1262,6 @@ body {
 			S-5.1,426.8-5.1,428.2z" />
 	</g>
 </svg>
-</div>
 			</a>
 		</div>
 	</div>
@@ -1460,7 +1476,7 @@ body {
 			class='item_block-disabled sidebar-nav-norm sidebar-nav-l-1' >
 		&nbsp;
 	</a><a id='nav-menu-up' class='XURL item_block_container ' href='/world/philosophy/god' data-target='world/philosophy/god' data-title='God'>
-		<img class='item_block_image ' src='/world/philosophy/god/index.jpg ' alt='Navigation - up level tile'><div class='item_block_text'><div>God</div><div class='arrow'>&#x25B3;</div></div>
+		<img class='item_block_image ' src='/world/philosophy/god/index.jpg ' alt='Navigation - up level tile'><div class='item_block_text'><div>God</div><div class='arrow'>&#x25B2;</div></div>
 	</a>
 </div>
 									</div>
@@ -1483,7 +1499,7 @@ body {
 	<div class='shadow-scroll-bottom'></div>
 	<div id='footer-wrapper-divider'></div>
 	<div class='footer-content' id='footer-support'>
-		<a class='content-link' href='https://patreon.com/ujnotes' id='patreon' onclick="trackOutboundLink('ujnotes-patreon', 'https://patreon.com/ujnotes'); return false;">support project on Patreon</a>
+		<a class='content-link' href='https://patreon.com/ujnotes' id='patreon' onclick="trackOutboundLink('ujnotes-patreon', 'https://patreon.com/ujnotes'); return false;">support on Patreon</a>
 	</div>
 	<div id='footer-wrapper-inside'>
 		<div id='social-links'>
