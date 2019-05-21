@@ -99,6 +99,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	var PROJECT_TITLE = 'Ujnotes';
 </script>
 	<style>
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Condensed', Abel, sans-serif;
+}
+
 h1, h3 {
 	color: #69b7cf !important;
 }
@@ -215,43 +219,43 @@ blockquote {
 	}
 
 }
-.indent-10 {
+.indent-a {
 	padding-left: 10px;
 }
 
-.indent-16 {
+.indent-b {
 	padding-left: 16px;
 }
 
-.indent-20 {
+.indent-c {
 	padding-left: 20px;
 }
 
-.indent-32 {
+.indent-d {
 	padding-left: 32px;
 }
 
-.indent-40 {
+.indent-e {
 	padding-left: 40px;
 }
 
-.indent-60 {
+.indent-f {
 	padding-left: 60px;
 }
 @media (max-width: 540px) {
 
-	.indent-60 {
-		padding-left: 20px;
+	.indent-c {
+		padding-left: 8px;
 	}
-	
-	.indent-40 {
+
+	.indent-e {
 		padding-left: 30px;
 	}
 
-	.indent-20 {
+	.indent-f {
 		padding-left: 8px;
 	}
-	
+
 }
 #message > .list-bullet.content-list {
 	padding-left: 16px !important;
@@ -471,22 +475,38 @@ h1#title {
 #me-table .R2 > .separator {
 	color: #ADADAD
 }
+
+#linkedin-badge > img {
+	width: 160px;
+	height: 33px;
+	border: 0;
+}
+
+#stackoverflow-badge > img {
+	width: 208px;
+	height: 58px;
+}
+
+#facebook-badge > img {
+	border: 0;
+}
 @media (max-width: 540px) {
 
 	#me-table div {
 	}
-	
+
 	#me-table .R1 {
 		text-align: left !important;
+		padding-left: 6px
 	}
-	
+
 	#me-table .R2 {
 		padding-left: 45px !important;
 		clear: both;
 		margin-top: 4px;
-		margin-bottom: 4px;
+		margin-bottom: 4px
 	}
-	
+
 }
 #content-timeline {
 	padding-top: 8px
@@ -504,7 +524,7 @@ body {
 	margin: 0 auto;
 	overflow-x: hidden;
 	height: 100%;
-	font-family: Abel,Arial,Verdana,sans-serif;
+	font-family: Abel,'Roboto Condensed',Arial,Verdana,sans-serif;
 	color: #5a5a5a;
 }
 
@@ -562,7 +582,7 @@ body {
 }
 
 .grow:hover {
-	transform: scale(1.1);	
+	transform: scale(1.1);
 }
 @media (max-width: 540px) {
 	html {
@@ -575,6 +595,16 @@ body {
 	font-weight: 400;
 	src: local('Abel'), local('Abel-Regular'), url(//fonts.gstatic.com/s/abel/v6/brdGGFwqYJxjg2CD1E9o7g.woff2) format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), local('sans-serif-condensed'), url(https://fonts.gstatic.com/s/robotocondensed/v17/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 #footer-wrapper-divider {
 	border-bottom: 1px solid #ddd;
@@ -749,6 +779,7 @@ body {
 	margin: 5px;
 	vertical-align: middle;
 	transition: 0.75s;
+	font-family: 'Roboto condensed', Abel, sans-serif;
 }
 
 .item_block_image {
@@ -1141,6 +1172,7 @@ body {
 
 #home-menu .home-menu-group-parent {
 	margin-bottom: 12px;
+	font-family: 'Roboto Condensed', Abel, sans-serif
 }
 
 #home-menu > div > a {
