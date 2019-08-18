@@ -6,6 +6,7 @@
 	<meta name='title' content="Ujnotes" >
 	<meta name='author' content="Ujjwal Singh" >
 	<meta name='viewport' content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+	<meta name='theme-color' content='#ffffff' >
 	<meta itemprop="name" content="Ujnotes" />
 <meta itemprop="description" content="Ujjwal Singh's notes on life and technology" />
 <meta itemprop="image" content="https://ujnotes.com/social.png" />
@@ -99,6 +100,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	var PROJECT_TITLE = 'Ujnotes';
 </script>
 	<style>
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Condensed', Abel, sans-serif;
+}
+
 h1, h3 {
 	color: #69b7cf !important;
 }
@@ -215,43 +220,43 @@ blockquote {
 	}
 
 }
-.indent-10 {
+.indent-a {
 	padding-left: 10px;
 }
 
-.indent-16 {
+.indent-b {
 	padding-left: 16px;
 }
 
-.indent-20 {
+.indent-c {
 	padding-left: 20px;
 }
 
-.indent-32 {
+.indent-d {
 	padding-left: 32px;
 }
 
-.indent-40 {
+.indent-e {
 	padding-left: 40px;
 }
 
-.indent-60 {
+.indent-f {
 	padding-left: 60px;
 }
 @media (max-width: 540px) {
 
-	.indent-60 {
-		padding-left: 20px;
+	.indent-c {
+		padding-left: 8px;
 	}
-	
-	.indent-40 {
+
+	.indent-e {
 		padding-left: 30px;
 	}
 
-	.indent-20 {
+	.indent-f {
 		padding-left: 8px;
 	}
-	
+
 }
 #message > .list-bullet.content-list {
 	padding-left: 16px !important;
@@ -471,22 +476,38 @@ h1#title {
 #me-table .R2 > .separator {
 	color: #ADADAD
 }
+
+#linkedin-badge > img {
+	width: 160px;
+	height: 33px;
+	border: 0;
+}
+
+#stackoverflow-badge > img {
+	width: 208px;
+	height: 58px;
+}
+
+#facebook-badge > img {
+	border: 0;
+}
 @media (max-width: 540px) {
 
 	#me-table div {
 	}
-	
+
 	#me-table .R1 {
 		text-align: left !important;
+		padding-left: 6px
 	}
-	
+
 	#me-table .R2 {
 		padding-left: 45px !important;
 		clear: both;
 		margin-top: 4px;
-		margin-bottom: 4px;
+		margin-bottom: 4px
 	}
-	
+
 }
 #content-timeline {
 	padding-top: 8px
@@ -504,7 +525,7 @@ body {
 	margin: 0 auto;
 	overflow-x: hidden;
 	height: 100%;
-	font-family: Abel,Arial,Verdana,sans-serif;
+	font-family: Abel,'Roboto Condensed',Arial,Verdana,sans-serif;
 	color: #5a5a5a;
 }
 
@@ -562,7 +583,7 @@ body {
 }
 
 .grow:hover {
-	transform: scale(1.1);	
+	transform: scale(1.1);
 }
 @media (max-width: 540px) {
 	html {
@@ -576,6 +597,16 @@ body {
 	src: local('Abel'), local('Abel-Regular'), url(//fonts.gstatic.com/s/abel/v6/brdGGFwqYJxjg2CD1E9o7g.woff2) format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+
+/* latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), local('sans-serif-condensed'), url(https://fonts.gstatic.com/s/robotocondensed/v17/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 #footer-wrapper-divider {
 	border-bottom: 1px solid #ddd;
 	margin-left: 25%;
@@ -587,7 +618,7 @@ body {
 	font-size: 0.875em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -215px;
+	margin-top: -186px;
 	position: relative
 }
 
@@ -749,6 +780,7 @@ body {
 	margin: 5px;
 	vertical-align: middle;
 	transition: 0.75s;
+	font-family: 'Roboto condensed', Abel, sans-serif;
 }
 
 .item_block_image {
@@ -1141,6 +1173,7 @@ body {
 
 #home-menu .home-menu-group-parent {
 	margin-bottom: 12px;
+	font-family: 'Roboto Condensed', Abel, sans-serif
 }
 
 #home-menu > div > a {
@@ -1326,11 +1359,11 @@ body {
 			<div  class='sidebar-nav-group page-list'>
 <a
 	class='XURL item_block_container' href='/' data-target='root' data-title=''>
-<img class='item_block_image item_block_image_visible' src='/root.svg' alt="Navigation - link to root"><div class='item_block_text'><div>home</div></div></a><a
+<img class='item_block_image item_block_image_visible' src='/root.svg' loading='lazy' alt="Navigation - link to root"><div class='item_block_text'><div>home</div></div></a><a
 	class='XURL item_block_container' href='/world' data-target='world' data-title='World'>
-<img class='item_block_image item_block_image_visible' src='/world/index.jpg' alt="Navigation - link to world"><div class='item_block_text'><div>World</div></div></a><a
+<img class='item_block_image item_block_image_visible' src='/world/index.jpg' loading='lazy' alt="Navigation - link to world"><div class='item_block_text'><div>World</div></div></a><a
 	class='XURL item_block_container' href='/computer' data-target='computer' data-title='Computer'>
-<img class='item_block_image item_block_image_visible' src='/computer/index.jpg' alt="Navigation - link to computer"><div class='item_block_text'><div>Computer</div></div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+<img class='item_block_image item_block_image_visible' src='/computer/index.jpg' loading='lazy' alt="Navigation - link to computer"><div class='item_block_text'><div>Computer</div></div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 <div class='sidebar-nav-group page-list'>
 <a class='XURL item_block' href='/about' data-target='about' data-title='About'><div>About</div></a><a class='XURL item_block' href='/faq' data-target='faq' data-title='FAQ'><div>FAQ</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 <div class='sidebar-nav-group page-list'>
@@ -1375,19 +1408,19 @@ body {
 	<div  class='page-list'>
 <a
 	class='XURL item_block_container' href='/world/philosophy' data-target='world/philosophy' data-title='Philosophy'>
-<img class='item_block_image item_block_image_visible' src='/world/philosophy/index.jpg' alt="Navigation - link to world/philosophy"><div class='item_block_text'><div>Philosophy</div></div></a></div>
+<img class='item_block_image item_block_image_visible' src='/world/philosophy/index.jpg' loading='lazy' alt="Navigation - link to world/philosophy"><div class='item_block_text'><div>Philosophy</div></div></a></div>
 		<br>
 	<div class="home-menu-group-parent"><a class="content-link XURL" href='/computer' data-target='computer' data-title='Computer'>Computer</a></div>
 	<div  class='page-list'>
 <a
 	class='item_block_container' href='http://ujnotes.com/computer/os' target='_blank' onclick="trackOutboundLink('OS','http://ujnotes.com/computer/os'); return false;">
-<img class='item_block_image item_block_image_visible' src='/computer/os/index.jpg' alt="Navigation - link to computer/os"><div class='item_block_text'><div>OS</div><div class='external'><img src='/resource/external.svg' alt="Navigation - link to computer/os"></div></div></a><a
+<img class='item_block_image item_block_image_visible' src='/computer/os/index.jpg' loading='lazy' alt="Navigation - link to computer/os"><div class='item_block_text'><div>OS</div><div class='external'><img src='/resource/external.svg' loading='lazy' alt="Navigation - link to computer/os"></div></div></a><a
 	class='item_block_container' href='http://ujnotes.com/computer/program' target='_blank' onclick="trackOutboundLink('Program','http://ujnotes.com/computer/program'); return false;">
-<img class='item_block_image item_block_image_visible' src='/computer/program/index.jpg' alt="Navigation - link to computer/program"><div class='item_block_text'><div>Program</div><div class='external'><img src='/resource/external.svg' alt="Navigation - link to computer/program"></div></div></a><a
+<img class='item_block_image item_block_image_visible' src='/computer/program/index.jpg' loading='lazy' alt="Navigation - link to computer/program"><div class='item_block_text'><div>Program</div><div class='external'><img src='/resource/external.svg' loading='lazy' alt="Navigation - link to computer/program"></div></div></a><a
 	class='item_block_container' href='http://ujnotes.com/computer/programming' target='_blank' onclick="trackOutboundLink('Programming','http://ujnotes.com/computer/programming'); return false;">
-<img class='item_block_image item_block_image_visible' src='/computer/programming/index.jpg' alt="Navigation - link to computer/programming"><div class='item_block_text'><div>Programming</div><div class='external'><img src='/resource/external.svg' alt="Navigation - link to computer/programming"></div></div></a><a
+<img class='item_block_image item_block_image_visible' src='/computer/programming/index.jpg' loading='lazy' alt="Navigation - link to computer/programming"><div class='item_block_text'><div>Programming</div><div class='external'><img src='/resource/external.svg' loading='lazy' alt="Navigation - link to computer/programming"></div></div></a><a
 	class='XURL item_block_container' href='/computer/game' data-target='computer/game' data-title='Game'>
-<img class='item_block_image item_block_image_visible' src='/computer/game/index.jpg' alt="Navigation - link to computer/game"><div class='item_block_text'><div>Game</div></div></a></div>
+<img class='item_block_image item_block_image_visible' src='/computer/game/index.jpg' loading='lazy' alt="Navigation - link to computer/game"><div class='item_block_text'><div>Game</div></div></a></div>
 </div>
 <div id='fb_components'>
 	<div class="fb-like"
@@ -1409,17 +1442,10 @@ body {
 		</div>
 		</div>
 		<div id='footer-wrapper'>
-	<div id='updated-container'>
-		<div id='updated'>
-			Updated:
-			<span id='date'>
-				2018 Apr 28			</span>
-		</div>
-	</div>
 	<div class='shadow-scroll-bottom'></div>
 	<div id='footer-wrapper-divider'></div>
 	<div class='footer-content' id='footer-support'>
-		<a class='content-link' href='https://patreon.com/ujnotes' id='patreon' onclick="trackOutboundLink('ujLion-patreon', 'https://patreon.com/ujLion'); return false;">support on Patreon</a>
+		<a class='content-link' href='https://patreon.com/ujlion' id='patreon' onclick="trackOutboundLink('ujLion-patreon', 'https://patreon.com/ujlion'); return false;">support on Patreon</a>
 	</div>
 	<div id='footer-wrapper-inside'>
 		<div id='social-links'>
