@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge' >
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' >
-	<meta name='title' content="Ujnotes" >
+	<meta name='title' content="An elaboration of death's significance - Ujnotes" >
 	<meta name='author' content="Ujjwal Singh" >
 	<meta name='viewport' content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
 	<meta name='theme-color' content='#ffffff' >
@@ -132,12 +132,75 @@ h1 {
 img {
 	max-width: 100%;
 }
+
+#message.alt_div_shade {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.alt_div_shade > div, .odd_shade, .even_shade {
+	padding-left: 6px;
+}
+
+.odd_shade, .alt_div_shade > div:nth-child(odd) {
+	padding-top: 0px;
+	padding-bottom: 28px;
+}
+
+.even_shade, .alt_div_shade > div:nth-child(even) {
+	padding-top: 20px;
+	padding-bottom: 28px;
+	background: linear-gradient(to right, #f2f2f2 20%, white);
+	border-radius: 8px
+}
+
+.alt_div_shade > div > h2, .odd_shade > h2, .even_shade > h2 {
+	padding-left: 16px;
+}
+
+.message_left_div {
+	display: inline-block;
+	width: 80%;
+	float: left;
+	margin-left: 0%
+}
+
+.message_right_div {
+	width: 80%;
+	display: inline-block;
+	float: right;
+	margin-right: 0%
+}
+
+.message_center_div {
+	width: 80%
+	display: inline-block;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#message > *, #nav-menu_container, #fb_components {
+	margin-left: 10%;
+	width: 80%
+}
+
+.google-auto-placed {
+	margin: 0 !important;
+	width: 100% !important
+}
 @media (max-width: 540px) {
+	
 	h1, h2, h3, h4, h5, h6 {
 		padding-left: 5px;
 		padding-right: 5px
 	}
 
+	.message_left_div, .message_right_div, .message_center_div, #message > *, #nav-menu_container, #fb_components {
+		width: auto;
+		margin-left: auto;
+		margin-right: auto
+	}
+	
 }
 pre {
 	font-family: monospace
@@ -219,6 +282,12 @@ blockquote {
 		margin-right: 3px
 	}
 
+}
+@media (max-width: 540px) {
+	#fb_components {
+		padding-left: 2px;
+		padding-right: 2px
+	}
 }
 .indent-a {
 	padding-left: 10px;
@@ -321,14 +390,14 @@ ul.content-list-2, ol.content-list-2 {
 	padding-top: 12px;
 	padding-bottom: 12px;
 }
-
 #fb_components {
-    margin-left: 20px
+	padding-left: 10px;
+	padding-right: 10px
 }
 
 #fb_components .fb-like {
-    padding: 16px 0 10px 10px;
-    vertical-align: top
+	padding: 16px 0 10px 10px;
+	vertical-align: top
 }
 #nav-list {
 	padding: 26px 0 36px;
@@ -347,7 +416,12 @@ ul.content-list-2, ol.content-list-2 {
 }
 
 #nav-menu-prev {
-	float: left;
+	float: left
+}
+
+#nav-menu-prev > .item_block_text > div {
+	margin-left: 12px;
+	margin-right: 0
 }
 
 #nav-menu-next {
@@ -360,7 +434,7 @@ ul.content-list-2, ol.content-list-2 {
 
 #nav-menu-next > .item_block_text > div {
 	margin-left: 0px;
-	margin-right: 28px;
+	margin-right: 12px
 }
 
 .path-separator {
@@ -535,9 +609,10 @@ body {
 }
 
 .center {
+	display: block !important;
 	margin-left: auto !important;
 	margin-right: auto !important;
-	text-align: center !important;
+	text-align: center !important
 }
 
 .no-margin {
@@ -737,7 +812,7 @@ body {
 	margin-bottom: -4px
 }
 #menu-button {
-	margin: 13px 0 0 82px;
+	margin: 13px 0 0 54px;
 	display: inline-block;
 	float: left;
 	background-size: contain;
@@ -1011,7 +1086,7 @@ body {
 	z-index: 1;
 	overflow: hidden;
 	width: 50%;
-	transform: translateX(-932px);
+	transform: translateX(-100%);
 	display: inline-block;
 	float: left;
 	transition: all 0.7s;
@@ -1077,7 +1152,6 @@ body {
 
 #wrapper {
 	margin: 0 auto;
-	max-width: 932px;
 	padding-bottom: 192px
 }
 
@@ -1088,7 +1162,7 @@ body {
 }
 
 #canvas-wrapper-inner-container {
-	max-width: 1868px;
+	max-width: 2880px;
 	width: 200%;
 }
 
@@ -1156,11 +1230,16 @@ body {
 }
 #home-message {
 	float: left;
-	display: inline-block
+	display: inline-block;
+	margin-left: 22px
 }
 
 #home-message > p:first-child {
-	margin-top: -2px;
+	margin-top: -2px
+}
+
+#home-message > p:not(:first-child) {
+	margin-left: 10px
 }
 
 #home-menu {
@@ -1184,47 +1263,52 @@ body {
 #home-menu > div.sidebar-nav-group {
 	padding-left: 28px
 }
+@media (max-width: 540px) {
+	#home-message {
+		margin-left: auto !important
+	}
+}
 #profile-image-container {
-    display: inline-block;
-    float: right;
-    text-align: center;
-    margin: 0 2px 18px 0
+	display: inline-block;
+	float: right;
+	text-align: center;
+	margin: 0 2px 18px 0
 }
 
 #profile-image {
-    display: inline-block;
-    max-width: 300px;
-    background: url(/photo.jpg);
-    background-position-x: -304px;
-    background-position-y: -116px;
-    background-repeat: no-repeat;
-    border-radius: 4px;
-    box-shadow: 0 1px 10px #afafaf;
-    -webkit-box-shadow: 0 1px 10px #afafaf;
-    -moz-box-shadow: 0 1px 10px #afafaf;
-    z-index: 999
+	display: inline-block;
+	max-width: 300px;
+	background: url(/photo.jpg);
+	background-position-x: -304px;
+	background-position-y: -116px;
+	background-repeat: no-repeat;
+	border-radius: 4px;
+	box-shadow: 0 1px 10px #afafaf;
+	-webkit-box-shadow: 0 1px 10px #afafaf;
+	-moz-box-shadow: 0 1px 10px #afafaf;
+	z-index: 999
 }
 
 #profile-image>img {
-    visibility: hidden;
-    transition-duration: 0s
+	visibility: hidden;
+	transition-duration: 0s
 }
 
 #profile-image:focus {
-    float: none;
-    margin: auto;
-    max-width: none;
-    background-image: none;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none
+	float: none;
+	margin: auto;
+	max-width: none;
+	background-image: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none
 }
 
 #profile-image:focus>img {
-    visibility: visible;
-    box-shadow: 0 1px 10px #afafaf;
-    -webkit-box-shadow: 0 1px 10px #afafaf;
-    -moz-box-shadow: 0 1px 10px #afafaf
+	visibility: visible;
+	box-shadow: 0 1px 10px #afafaf;
+	-webkit-box-shadow: 0 1px 10px #afafaf;
+	-moz-box-shadow: 0 1px 10px #afafaf
 }
 	</style>
 </head>
@@ -1362,7 +1446,7 @@ body {
 							<div id='title-container' class=""><h1 id='title'>Death</h1></div>
 							<div id='canvas-wrapper-inner-container'>
 								<div id='nav-menu'>
-	<div class='nav-menu_container'>
+	<div id='nav-menu_container'>
 		<div class='sidebar-nav-li sidebar-sub'>
 			<div  class='sidebar-nav-group page-list'>
 <a
@@ -1384,8 +1468,10 @@ body {
 								<div id='canvas-main'>
 									<div id='content'>
 										<div id='message'>
+	<div class='content-image-container'>
 	<div class='cover-image' style='padding-bottom: 68.26%'>
-	<img src='/world/philosophy/death.jpg' alt='A cemetery with crosses on the graves'>
+		<img src='/world/philosophy/death.jpg' alt='A cemetery with crosses on the graves'>
+	</div>
 </div>
 	<h2 class='center'>An elaboration of death's significance</h2>
 	<h3>
