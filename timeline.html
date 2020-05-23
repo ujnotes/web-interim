@@ -23,7 +23,7 @@
 <meta name="twitter:title" content="Timeline">
 <meta name="twitter:description" content="Markable events in project's lifetime">
 <meta name="twitter:image" content="https://ujnotes.com/social.png">
-<meta name="twitter:creator" content="ujnotes.jpg">
+<meta name="twitter:creator" content="ujnotes">
 	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' >
 	<link rel='apple-touch-icon' type='image/png' href='/apple-touch-icon.png' >
 	<link rel='manifest' href='/manifest.json' >
@@ -67,7 +67,7 @@ var trackOutboundLink = function(title, url) {
 		enable_page_level_ads: true
 	});
 </script>
-		<script src='https://browser.sentry-cdn.com/4.0.6/bundle.min.js' crossorigin='anonymous'
+		<script src='https://browser.sentry-cdn.com/5.7.0/bundle.min.js' crossorigin='anonymous'
 ></script>
 		<script>Sentry.init({ dsn: 'https://52c8382bd8f04bf19da361ac5905e237@sentry.io/187146' });
 </script>
@@ -693,7 +693,7 @@ body {
 	font-size: 0.875em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -186px;
+	margin-top: -232px;
 	position: relative
 }
 
@@ -981,7 +981,7 @@ body {
 }
 
 .item_block-placeholder {
-	width: 170px;
+	width: 174px;
 	display: inline-block;
 	height: 0 !important;
 	margin: 0 5px !important;
@@ -1102,6 +1102,13 @@ body {
 
 .pml-open #nav-menu {
 	transform: translateX(0)
+}
+@media print {
+	
+	.pagebreak {
+		page-break-before: always;
+	}
+	
 }
 .shadow-scroll-top {
 	height: 4px;
@@ -1451,11 +1458,21 @@ body {
 	class='XURL item_block_container' href='/computer' data-target='computer' data-title='Computer'>
 <img class='item_block_image item_block_image_visible' src='/computer/index.jpg' loading='lazy' alt="Navigation - link to computer"><div class='item_block_text'><div>Computer</div></div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 <div class='sidebar-nav-group page-list'>
-<a class='XURL item_block' href='/about' data-target='about' data-title='About'><div>About</div></a><a class='XURL item_block' href='/faq' data-target='faq' data-title='FAQ'><div>FAQ</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+			<a class="XURL item_block" href='/about' data-target='about' data-title='About'><div>About</div></a>
+			<a class="XURL item_block" href='/faq' data-target='faq' data-title='FAQ'><div>FAQ</div></a>
+<div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 <div class='sidebar-nav-group page-list'>
-<a class='XURL item_block' href='/feedback' data-target='feedback' data-title='Feedback'><div>Feedback</div></a><a class='XURL item_block' href='/license' data-target='license' data-title='License'><div>License</div></a><a class='XURL item_block' href='/logo' data-target='logo' data-title='Logo'><div>Logo</div></a><a class='XURL item_block' href='/roadmap' data-target='roadmap' data-title='Roadmap'><div>Roadmap</div></a><a class='XURL item_block' href='/changelog' data-target='changelog' data-title='Changelog'><div>Changelog</div></a><a class='XURL item_block' href='/timeline' data-target='timeline' data-title='Timeline'><div>Timeline</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+			<a class="XURL item_block" href='/feedback' data-target='feedback' data-title='Feedback'><div>Feedback</div></a>
+			<a class="XURL item_block" href='/license' data-target='license' data-title='License'><div>License</div></a>
+			<a class="XURL item_block" href='/logo' data-target='logo' data-title='Logo'><div>Logo</div></a>
+			<a class="XURL item_block" href='/roadmap' data-target='roadmap' data-title='Roadmap'><div>Roadmap</div></a>
+			<a class="XURL item_block" href='/changelog' data-target='changelog' data-title='Changelog'><div>Changelog</div></a>
+			<a class="XURL item_block" href='/timeline' data-target='timeline' data-title='Timeline'><div>Timeline</div></a>
+<div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 <div class='sidebar-nav-group page-list'>
-<a class='XURL item_block' href='/about_site' data-target='about_site' data-title='About site'><div>About site</div></a><a class='XURL item_block' href='/about_me' data-target='about_me' data-title='About me'><div>About me</div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+			<a class="XURL item_block" href='/about_site' data-target='about_site' data-title='About site'><div>About site</div></a>
+			<a class="XURL item_block" href='/about_me' data-target='about_me' data-title='About me'><div>About me</div></a>
+<div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 		</div>
 	</div>
 </div>
