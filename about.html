@@ -105,6 +105,11 @@ h2 {
 	color: #AAAAAA !important;
 }
 
+.h_faded_bar h2 {
+	padding: 5px 0 7px 11px;
+	background: linear-gradient(to right,#f2f2f2 20%,white);	
+}
+
 h2 > .key {
 	font-size: 1.12em;
 	color: #69b7cf !important;
@@ -630,18 +635,18 @@ body {
 	text-decoration: none
 }
 
-.content-link {
+.content-link, .link {
 	text-decoration: none;
 	color: #69b7cf!important
 }
 
-.content-link-gray {
+.content-link-gray,.link-gray {
 	text-decoration: none;
 	color: #bbbbbb!important;
 	transition: all ease-out 0.3s;
 }
 
-.content-link-gray:hover {
+.content-link-gray:hover, .link:hover {
 	text-decoration: none;
 	color: #69b7cf!important
 }
@@ -726,7 +731,7 @@ body {
 	transition: all ease-out 0.3s
 }
 
-#site-twitter:hover path, #site-facebook:hover path, #site-gplus:hover .image>svg>path, #site-youtube:hover #lozenge path {
+#site-twitter:hover path, #site-facebook:hover path, #site-gplus:hover .image>svg>path, #site-youtube:hover svg>path {
 	fill: #56b4d1
 }
 #header-logo {
@@ -962,13 +967,13 @@ body {
 .item_block-disabled {
 	visibility: hidden;
 	vertical-align: middle;
-	width: 158px;
-	height: 64px;
-	margin: 5px;
+	width: 156px;
+	height: 143px;
+	margin: 5px 12px;
 	line-height: 64px;
 	display: inline-block;
+	border: none;
 	border-style: solid;
-	border-width: 1px;
 	border-color: #efefef;
 	background-color: #fff !important;
 }
@@ -1313,6 +1318,12 @@ body {
 #footer-wrapper {
 	margin-top: -186px;
 }
+#search-button :hover svg > path:first-child {
+	fill: #56b4d1
+}
+#translate-button :hover svg > path:last-child {
+	fill: #56b4d1
+}
 	</style>
 </head>
 <body>
@@ -1392,7 +1403,6 @@ body {
 	<div id='header-bar'>
 	<div><div class='toggle-push-left image grow' id='menu-button'><svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
 	 viewBox="-9 1.4 200 200">
-	<rect x='-9.2' y='1.4' fill='#FFFFFF' fill-opacity='0.9306' width='200.4' height='200' />
 	<path fill='none' d="M91,108.6" />
 	<path fill='none' d="M91,86.4" />
 	<g id='menu_dash_1'>
@@ -1519,17 +1529,12 @@ body {
 			<div class='social grow'>
 				<a href='https://www.youtube.com/channel/UCTwMsocIDjjMf4f0gFmMAtQ' id='site-youtube' onclick="trackOutboundLink('ujnotes-youtube', 'https://youtube.com/ujnotes'); return false;"><div class='image'><svg id='youtube_icon' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
 	 viewBox="0 -158 1024 1024">
-	<path fill='#FFFFFF' d="M407,493l276-143L407,206V493z" />
 	<path fill='#D9D9D9' d="M407,206l242,161.6l34-17.6L407,206z" />
-	<g id='lozenge'>
-		<g>
-			<path fill='#D9D9D9' d="M1013,156.3c0,0-10-70.4-40.6-101.4C933.6,14.2,890,14,870.1,11.6C727.1,1.3,512.7,1.3,512.7,1.3h-0.4
-				c0,0-214.4,0-357.4,10.3C135,14,91.4,14.2,52.6,54.9C22,85.9,12,156.3,12,156.3S1.8,238.9,1.8,321.6v77.5
-				C1.8,481.8,12,564.4,12,564.4s10,70.4,40.6,101.4c38.9,40.7,89.9,39.4,112.6,43.7c81.7,7.8,347.3,10.3,347.3,10.3
-				s214.6-0.3,357.6-10.7c20-2.4,63.5-2.6,102.3-43.3c30.6-31,40.6-101.4,40.6-101.4s10.2-82.7,10.2-165.3v-77.5
-				C1023.2,238.9,1013,156.3,1013,156.3z M407,493l0-287l276,144L407,493z" />
-		</g>
-	</g>
+	<path fill='#D9D9D9' d="M1013,156.3c0,0-10-70.4-40.6-101.4C933.6,14.2,890,14,870.1,11.6C727.1,1.3,512.7,1.3,512.7,1.3h-0.4
+		c0,0-214.4,0-357.4,10.3C135,14,91.4,14.2,52.6,54.9C22,85.9,12,156.3,12,156.3S1.8,238.9,1.8,321.6v77.5
+		C1.8,481.8,12,564.4,12,564.4s10,70.4,40.6,101.4c38.9,40.7,89.9,39.4,112.6,43.7c81.7,7.8,347.3,10.3,347.3,10.3
+		s214.6-0.3,357.6-10.7c20-2.4,63.5-2.6,102.3-43.3c30.6-31,40.6-101.4,40.6-101.4s10.2-82.7,10.2-165.3v-77.5
+		C1023.2,238.9,1013,156.3,1013,156.3z M407,493l0-287l276,144L407,493z" />
 </svg>
 </div></a>
 			</div>
@@ -1538,7 +1543,8 @@ body {
 			<a class='content-link-gray XURL' href='/license' data-target='license' data-title='License'>Some rights reserved</a>
 		</div>
 		<div class='footer-content'>
-			by <a class="content-link XURL" href='/about_me' data-target='about_me' data-title='About me' rel='author'>Ujjwal Singh</a>
+			<a class="content-link-gray XURL" href='/license' data-target='license' data-title='License'>Copyright &copy; 2020</a>
+			<a class="content-link XURL" href='/about_me' data-target='about_me' data-title='About me'>Ujjwal Singh</a><a class='content-link' target='_blank' href='/about_me' rel='author'></a>
 		</div>
 	</div>
 </div>
