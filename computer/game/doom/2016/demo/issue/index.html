@@ -60,9 +60,28 @@ var trackOutboundLink = function(title, url) {
 }
 
 </script>
-		<script src='https://browser.sentry-cdn.com/6.4.1/bundle.min.js' crossorigin='anonymous'
+		<script src='https://browser.sentry-cdn.com/8.8.0/bundle.tracing.min.js'
+integrity='sha384-3xNfdcTUrviKOLzYGFielxgKX/Szl/FWt+1HcgMkoseZuknvqFNB5wIhoyZl9Qy0'
+crossorigin='anonymous'
 ></script>
-		<script>Sentry.init({ dsn: 'https://52c8382bd8f04bf19da361ac5905e237@sentry.io/187146' });
+		<script>Sentry.init({
+    dsn: 'https://52c8382bd8f04bf19da361ac5905e237@o85995.ingest.us.sentry.io/187146',
+    release: "ujnotes.com@1.1.1",
+      integrations: [
+        Sentry.browserTracingIntegration(),
+        Sentry.replayIntegration(),
+      ],
+
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for performance monitoring.
+      // We recommend adjusting this value in production
+      tracesSampleRate: 1.0,
+
+      // Capture Replay for 10% of all sessions,
+      // plus for 100% of sessions with an error
+      replaysSessionSampleRate: 1.0,
+      replaysOnErrorSampleRate: 1.0,
+});
 </script>
 		<script src='//apis.google.com/js/platform.js' async defer></script>
 		<script src='//platform.twitter.com/widgets.js' async></script>
