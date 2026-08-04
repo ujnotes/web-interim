@@ -29,7 +29,7 @@
 	<link rel='apple-touch-icon' type='image/png' href='/apple-touch-icon.png' >
 	<link rel='manifest' href='/manifest.json' >
 	<link href="https://ujnotes.com/world/philosophy/death" rel='canonical' >
-	<title>An elaboration of death's significance - Ujnotes</title>
+		<title>An elaboration of death's significance - Ujnotes</title>
 <script>
 /**
 * Function that tracks a click on an outbound link in Analytics.
@@ -80,6 +80,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	if(typeof initLoad != 'undefined')
 		initLoad();
 });
+if (window.location.hostname === 'ujnotes.local' ||
+	window.location.hostname === 'localhost' ||
+	window.location.hostname.endsWith('.local') ||
+	window.location.hostname === '127.0.0.1') {
+	isTranslateButtonActive = false;
+}
 	</script>
 	<script async src='/script.js' defer></script>
 <script>
@@ -611,9 +617,31 @@ h1#title {
 	}
 }
 
-#google_translate_element {
+#translation-controls {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
     padding-top: 8px;
-    text-align: center
+}
+
+#translation-controls.hide_display {
+    display: none;
+}
+
+#language-switcher {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#language-switcher:empty {
+    display: none;
+}
+
+#language-switcher .lang-link {
+    color: inherit;
+    white-space: nowrap;
 }
 #updated-container {
 	padding-right: 10px;
@@ -1866,7 +1894,7 @@ html.dark-mode #profile-image:focus {
 	<div id='header-title'>
 		<div id='header-slogan' class='XURL' data-target='root' data-title=''>
 			<a id='header-slogan-href' href='/'>
-				<div id='header-slogan-text'>my notes</div>
+				<div id='header-slogan-text' style='font-size: 1em'>my notes</div>
 			</a>
 		</div>
 		<div id='header-logo' class='XURL' data-target='root' data-title=''>
@@ -1992,7 +2020,11 @@ html.dark-mode #profile-image:focus {
 				<div class='container'>
 					<div id='content-wrapper-inside'>
 						<div class='shadow-scroll-top'></div>
-						<div id='google_translate_element'></div>
+						<div id='translation-controls' class='hide_display'>
+							<div id='language-switcher'>
+</div>
+							<div id='google_translate_element'></div>
+						</div>
 						<div id='search_box'><div class="gcse-search"></div></div>
 						<div id='canvas-wrapper'>
 							<div id='path-container' class=""><div id='path'>	<a class='XURL content-link' href='/' data-target='root' data-title=''>&#8962; </a>
