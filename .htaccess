@@ -1,7 +1,7 @@
 DirectoryIndex index.html
 
-RewriteBase /
 RewriteEngine On
+RewriteBase /
 DirectorySlash Off
 
 RewriteRule ^(.+)/$ $1 [R=301]
@@ -22,23 +22,29 @@ RewriteRule ^nogod$ world/philosophy/god/no_god [R=301,L]
 RewriteRule ^problem$ world/philosophy/problem [R=301,L]
 RewriteRule ^solution$ world/philosophy/solution [R=301,L]
 
-RewriteRule ^computer/os$ https://drive.google.com/folderview?id=0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=307,L]
-RewriteRule ^computer/program$ https://drive.google.com/folderview?id=0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=307,L]
-RewriteRule ^computer/programming$ https://drive.google.com/folderview?id=0B0pxLafSqCjKT244VW92b1pGVnM [R=307,L]
+RewriteRule ^computer/dos$ computer/os [R=301,L]
+RewriteRule ^computer/dprogram$ computer/program [R=301,L]
+RewriteRule ^computer/dprogramming$ computer/programming [R=301,L]
 
-RewriteRule ^computer/dos$ https://drive.google.com/drive/folders/0B0pxLafSqCjKQ0tXc281bnJoaTQ [R=307,L]
-RewriteRule ^computer/dprogram$ https://drive.google.com/drive/folders/0B0pxLafSqCjKZkdRZk5ac2p4Zlk [R=307,L]
-RewriteRule ^computer/dprogramming$ https://drive.google.com/drive/folders/0B0pxLafSqCjKT244VW92b1pGVnM [R=307,L]
-
-rewriteCond %{REQUEST_FILENAME} -d
+# Canonical /{slug}, /{slug}.json, /{slug}.jpg, /{slug}.svg map onto the
+# baked /{slug}/index.* layout when the flat file is absent. Do not rewrite
+# unless the index artifact exists, or Apache rewrite-loops (HTTP 500).
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
 RewriteRule ^(.+)$ $1/index.html [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*?)\.json$ $1/index.json [L]
+RewriteCond %{DOCUMENT_ROOT}/$1/index.json -f
+RewriteRule ^(.+)\.json$ $1/index.json [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*?)\.jpg$ $1/index.jpg [L]
+RewriteCond %{DOCUMENT_ROOT}/$1/index.jpg -f
+RewriteRule ^(.+)\.jpg$ $1/index.jpg [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*?)$ $1.html [L]
+RewriteCond %{DOCUMENT_ROOT}/$1/index.svg -f
+RewriteRule ^(.+)\.svg$ $1/index.svg [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+)$ $1.html [L]

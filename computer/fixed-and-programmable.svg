@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 900 410"
+   role="img"
+   aria-labelledby="title description"
+   version="1.1"
+   id="svg75"
+   sodipodi:docname="fixed-and-programmable.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview75"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="2"
+     inkscape:cx="395"
+     inkscape:cy="265.25"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g51"
+     showgrid="false" />
+  <title
+     id="title">Fixed and programmable computers</title>
+  <desc
+     id="description">A beam balance has its procedure built into gears and levers. A Jacquard loom remains unchanged while punched-card instructions produce different woven patterns.</desc>
+  <defs
+     id="defs3">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#clothA"
+       id="pattern1"
+       patternTransform="matrix(1.04,0,0,1.04,9.1693861,567.81758)"
+       x="2.8"
+       y="3"
+       preserveAspectRatio="xMidYMid" />
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto">
+      <path
+         d="M0 0 10 5 0 10Z"
+         class="ink-fill"
+         id="path1" />
+    </marker>
+    <pattern
+       id="clothA"
+       width="14"
+       height="14"
+       patternUnits="userSpaceOnUse"
+       patternTransform="translate(-3.5,-3.5)"
+       inkscape:label="clothA">
+      <rect
+         width="14"
+         height="14"
+         fill="#f4cf78"
+         id="rect1" />
+      <path
+         d="M0 7h14M7 0v14"
+         stroke="#b64942"
+         stroke-width="4"
+         id="path2" />
+    </pattern>
+    <pattern
+       id="clothB"
+       width="16"
+       height="16"
+       patternUnits="userSpaceOnUse"
+       patternTransform="rotate(45)">
+      <rect
+         width="16"
+         height="16"
+         fill="#377887"
+         id="rect2" />
+      <path
+         d="M0 4h16M0 12h16"
+         stroke="#d8eee7"
+         stroke-width="4"
+         id="path3" />
+    </pattern>
+    <style
+       id="style3">
+      .panel { fill: #f7fbff; stroke: #40516f; stroke-width: 4; }
+      .machine { fill: #d9ecff; stroke: #40516f; stroke-width: 5; stroke-linejoin: round; }
+      .card { fill: #fff3bf; stroke: #40516f; stroke-width: 4; }
+      .line { fill: none; stroke: #40516f; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .label { fill: #40516f; font: 700 25px system-ui, sans-serif; text-anchor: middle; }
+      .note { fill: #465166; font: 18px system-ui, sans-serif; text-anchor: middle; }
+      .hole { fill: #40516f; }
+      .wood { fill: #a95f3b; stroke: #40516f; stroke-width: 4; stroke-linejoin: round; }
+      .metal { fill: #bfccd2; stroke: #40516f; stroke-width: 4; stroke-linejoin: round; }
+      .brass { fill: #d9a13d; stroke: #40516f; stroke-width: 3; }
+      .thread { fill: none; stroke: #738994; stroke-width: 1.4; }
+      .detail { fill: none; stroke: #465166; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .tiny { fill: #465166; font: 700 10px system-ui, sans-serif; letter-spacing: 1px; text-anchor: middle; }
+      .cloth-a { fill: url(#clothA); stroke: #40516f; stroke-width: 3; }
+      .cloth-b { fill: url(#clothB); stroke: #40516f; stroke-width: 3; }
+      .weight { fill: #688c98; stroke: #40516f; stroke-width: 3; }
+      .loom-face { fill: #fff9e9; stroke: #40516f; stroke-width: 4; }
+      .beam { stroke: #40516f; stroke-linecap: round; stroke-width: 9; fill: none; }
+      .shuttle { fill: #bd6242; stroke: #40516f; stroke-width: 3; }
+      .hub { fill: #fff8e5; }
+      .spoke { opacity: .55; stroke: #8e5925; stroke-width: 5; fill: none; }
+      .gold-line { stroke: #d9a13d; stroke-width: 4; fill: none; }
+      .heddle { stroke: #40516f; stroke-width: 8; fill: none; }
+      .ink-fill { fill: #40516f; }
+      /* UJNOTES_BROWSER_DARK_MODE_START */
+      @media (prefers-color-scheme: dark) {
+        .panel { fill: #1e2438; stroke: #d8e4f0; }
+        .machine { fill: #243044; stroke: #d8e4f0; }
+        .card { fill: #3d3420; stroke: #d8e4f0; }
+        .line, .beam, .heddle { stroke: #d8e4f0; }
+        .label, .hole, .ink-fill { fill: #d8e4f0; }
+        .note, .tiny { fill: #9aabbe; }
+        .wood { fill: #8a4e32; stroke: #d8e4f0; }
+        .metal { fill: #6a7a84; stroke: #d8e4f0; }
+        .brass { fill: #e0b056; stroke: #d8e4f0; }
+        .thread { stroke: #8aa0b0; }
+        .detail { stroke: #9aabbe; }
+        .cloth-a, .cloth-b { stroke: #d8e4f0; }
+        .weight { fill: #7ea0ac; stroke: #d8e4f0; }
+        .loom-face { fill: #2a3148; stroke: #d8e4f0; }
+        .shuttle { fill: #c56e4e; stroke: #d8e4f0; }
+        .hub { fill: #3a3424; }
+        .spoke, .gold-line { stroke: #e0b056; }
+        #clothA rect { fill: #c9a65a; }
+        #clothA path { stroke: #e07a72; }
+        #clothB rect { fill: #4a9aaa; }
+        #clothB path { stroke: #cfeee6; }
+      }
+      /* UJNOTES_BROWSER_DARK_MODE_END */
+    </style>
+  </defs>
+  <rect
+     class="panel"
+     x="22"
+     y="25"
+     width="410"
+     height="350"
+     rx="20"
+     id="rect3" />
+  <rect
+     class="panel"
+     x="468"
+     y="25"
+     width="410"
+     height="350"
+     rx="20"
+     id="rect4" />
+  <text
+     class="label"
+     x="227"
+     y="66"
+     id="text4">Fixed computer</text>
+  <text
+     class="label"
+     x="673"
+     y="66"
+     id="text5">Programmable computer</text>
+  <!-- A fixed-purpose beam balance: procedure embodied in structure -->
+  <g
+     id="g36">
+    <path
+       class="wood"
+       d="M76 270h302l-15 32H91Z"
+       id="path5" />
+    <path
+       class="metal"
+       d="m 205,169 c 2.51907,-13.73859 15.24423,-20.54188 22,-20.4974 6.71172,0.0442 18.90625,5.86198 22,20.4974 l 15,101 h -74 z"
+       id="path6"
+       sodipodi:nodetypes="cscccc" />
+    <path
+       class="detail"
+       d="m 227,108.85331 v 34.14018"
+       id="path7" />
+    <path
+       class="beam"
+       d="M79 142h298"
+       id="path8" />
+    <path
+       class="detail"
+       d="M103 148v66M353 148v66"
+       id="path10" />
+    <path
+       class="metal"
+       d="M69 214h68l-9 14H78ZM319 214h68l-9 14h-50Z"
+       id="path11" />
+    <path
+       class="detail"
+       d="M79 211q24-41 48 0M329 211q24-41 48 0"
+       id="path12" />
+    <rect
+       x="91"
+       y="181"
+       width="25"
+       height="30"
+       rx="3"
+       class="weight"
+       id="rect12" />
+    <rect
+       x="340"
+       y="171"
+       width="28"
+       height="40"
+       rx="3"
+       class="weight"
+       id="rect13" />
+    <!-- The former circle is now a toothed gear -->
+    <g
+       transform="translate(227 211)"
+       id="g27">
+      <g
+         class="brass"
+         id="g26">
+        <circle
+           r="12"
+           class="hub"
+           id="circle26" />
+      </g>
+      <path
+         d="M -0.43764356,-39.943796 -0.17721834,0.27054487"
+         class="spoke"
+         id="path26"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <path
+       class="brass"
+       d="M215 113 227 98l12 15-12 13Z"
+       id="path36" />
+  </g>
+  <text
+     class="tiny"
+     x="227"
+     y="328"
+     id="text36"
+     style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:10px;line-height:normal;font-family:system-ui, sans-serif">MECHANISM = PROCEDURE</text>
+  <text
+     class="note"
+     x="227"
+     y="353"
+     id="text37"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:normal;font-family:system-ui, sans-serif">change the task → rebuild the machine</text>
+  <!-- Articulated punched-card program -->
+  <g
+     transform="rotate(-5,1681.9377,-5410.9998)"
+     id="g52">
+    <path
+       class="card"
+       d="M 0,0 H 91 V 49 H 0 Z m 5,54 h 91 v 49 H 5 Z m 5,54 h 91 v 49 H 10 Z"
+       id="path37" />
+    <g
+       class="hole"
+       id="g51">
+      <circle
+         cx="16"
+         cy="14"
+         r="4"
+         id="circle37" />
+      <circle
+         cx="45"
+         cy="14"
+         r="4"
+         id="circle38" />
+      <circle
+         cx="74"
+         cy="14"
+         r="4"
+         id="circle39" />
+      <circle
+         cx="30"
+         cy="34"
+         r="4"
+         id="circle40" />
+      <circle
+         cx="74"
+         cy="34"
+         r="4"
+         id="circle41" />
+      <circle
+         cx="21"
+         cy="69"
+         r="4"
+         id="circle42" />
+      <circle
+         cx="50"
+         cy="69"
+         r="4"
+         id="circle43" />
+      <circle
+         cx="79"
+         cy="69"
+         r="4"
+         id="circle44" />
+      <circle
+         cx="21"
+         cy="89"
+         r="4"
+         id="circle45" />
+      <circle
+         cx="64"
+         cy="89"
+         r="4"
+         id="circle46" />
+      <circle
+         cx="26"
+         cy="123"
+         r="4"
+         id="circle47" />
+      <circle
+         cx="55"
+         cy="123"
+         r="4"
+         id="circle48" />
+      <circle
+         cx="84"
+         cy="123"
+         r="4"
+         id="circle49" />
+      <circle
+         cx="41"
+         cy="143"
+         r="4"
+         id="circle50" />
+      <circle
+         cx="84"
+         cy="143"
+         r="4"
+         id="circle51" />
+    </g>
+  </g>
+  <!-- Detailed Jacquard loom, unchanged while cards and patterns vary -->
+  <g
+     id="g70"
+     transform="translate(-11.486502)">
+    <path
+       class="wood"
+       d="M 619,100 H 790 V 305 H 619 Z"
+       id="path53" />
+    <path
+       d="M 634,116 H 775 V 290 H 634 Z"
+       class="loom-face"
+       id="path54" />
+    <path
+       class="wood"
+       d="m 615,143 h 179 v 18 H 615 Z m 0,132 h 179 v 18 H 615 Z"
+       id="path55" />
+    <g
+       class="thread"
+       id="g56">
+      <path
+         d="m 644,160 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111"
+         id="path56" />
+    </g>
+    <path
+       d="M 638,207 H 771"
+       class="heddle"
+       id="path57" />
+    <path
+       class="cloth-a"
+       d="m 644,212 h 120 v 48 H 644 Z"
+       id="path58"
+       style="fill:url(#pattern1)" />
+    <path
+       class="cloth-b"
+       d="m 644,260 h 120 v 30 H 644 Z"
+       id="path59" />
+    <path
+       d="M 641,184 H 768"
+       class="gold-line"
+       id="path60" />
+    <path
+       d="m 658,175 h 91 l 22,9 -22,9 h -91 l -20,-9 z"
+       class="shuttle"
+       id="path61" />
+    <g
+       transform="matrix(0.43,0,0,0.43,767.70704,122.04419)"
+       class="brass"
+       id="g69">
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         id="rect61" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(45)"
+         id="rect62" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(90)"
+         id="rect63" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(135)"
+         id="rect64" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="scale(-1)"
+         id="rect65" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(-135)"
+         id="rect66" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(-90)"
+         id="rect67" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(-45)"
+         id="rect68" />
+      <circle
+         r="32"
+         id="circle68"
+         cx="0"
+         cy="0" />
+      <circle
+         r="10"
+         class="hub"
+         id="circle69"
+         cx="0"
+         cy="0" />
+    </g>
+  </g>
+  <!-- The same loom yields visibly different fabrics -->
+  <g
+     transform="translate(806 171)"
+     id="g71">
+    <path
+       class="cloth-a"
+       d="M0 0h49v49H0Z"
+       id="path70" />
+    <path
+       class="cloth-b"
+       d="M0 61h49v49H0Z"
+       id="path71" />
+  </g>
+  <text
+     class="tiny"
+     x="534"
+     y="106"
+     id="text72"
+     style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:10px;line-height:normal;font-family:system-ui, sans-serif">PUNCHED CARDS</text>
+  <text
+     class="tiny"
+     x="830.81842"
+     y="304"
+     id="text73"
+     style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:10px;line-height:normal;font-family:system-ui, sans-serif">NEW PATTERNS</text>
+  <text
+     class="tiny"
+     x="673"
+     y="328"
+     id="text74"
+     style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:10px;line-height:normal;font-family:system-ui, sans-serif">SAME LOOM – NEW INSTRUCTIONS</text>
+  <text
+     class="note"
+     x="673"
+     y="353"
+     id="text75"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:normal;font-family:system-ui, sans-serif">change cards → change the result</text>
+  <metadata
+     id="metadata75">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Fixed and programmable computers</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

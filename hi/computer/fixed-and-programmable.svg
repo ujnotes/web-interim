@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 900 410"
+   xml:lang="hi" role="img"
+   aria-labelledby="title description"
+   version="1.1"
+   id="svg75"
+   sodipodi:docname="fixed-and-programmable.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview75"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="2"
+     inkscape:cx="684"
+     inkscape:cy="367.25"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g51" />
+  <title
+     id="title">नियत और प्रोग्राम योग्य कंप्यूटर</title>
+  <desc
+     id="description">दंड तुला की प्रक्रिया उसके गियर और लीवर में बनी होती है। जैक्वार्ड करघा वही रहता है, जबकि छिद्रित कार्ड अलग-अलग बुने पैटर्न बनाते हैं।</desc>
+  <defs
+     id="defs3">
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto">
+      <path
+         d="M0 0 10 5 0 10Z"
+         class="ink-fill"
+         id="path1" />
+    </marker>
+    <pattern
+       id="clothA"
+       width="14"
+       height="14"
+       patternUnits="userSpaceOnUse">
+      <rect
+         width="14"
+         height="14"
+         fill="#f4cf78"
+         id="rect1" />
+      <path
+         d="M0 7h14M7 0v14"
+         stroke="#b64942"
+         stroke-width="4"
+         id="path2" />
+    </pattern>
+    <pattern
+       id="clothB"
+       width="16"
+       height="16"
+       patternUnits="userSpaceOnUse"
+       patternTransform="rotate(45)">
+      <rect
+         width="16"
+         height="16"
+         fill="#377887"
+         id="rect2" />
+      <path
+         d="M0 4h16M0 12h16"
+         stroke="#d8eee7"
+         stroke-width="4"
+         id="path3" />
+    </pattern>
+    <filter
+       id="softShadow"
+       x="-0.0625"
+       y="-0.012738854"
+       width="1.125"
+       height="1.0413485">
+      <feDropShadow
+         dx="0"
+         dy="3"
+         stdDeviation="3"
+         flood-color="#172033"
+         flood-opacity=".16" />
+    </filter>
+    <style
+       id="style3">
+      :root { color-scheme: light dark; }
+      .panel { fill: var(--panel); stroke: var(--ink); stroke-width: 4; }
+      .machine { fill: var(--fill); stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; }
+      .card { fill: var(--card); stroke: var(--ink); stroke-width: 4; }
+      .line { fill: none; stroke: var(--ink); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .label { fill: var(--ink); font: 700 22px system-ui, 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; text-anchor: middle; }
+      .note { fill: var(--note); font: 18px system-ui, 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; text-anchor: middle; }
+      .hole { fill: var(--ink); }
+      .wood { fill: var(--wood); stroke: var(--ink); stroke-width: 4; stroke-linejoin: round; }
+      .metal { fill: var(--metal); stroke: var(--ink); stroke-width: 4; stroke-linejoin: round; }
+      .brass { fill: var(--brass); stroke: var(--ink); stroke-width: 3; }
+      .thread { fill: none; stroke: var(--thread); stroke-width: 1.4; }
+      .detail { fill: none; stroke: var(--note); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .tiny { fill: var(--note); font: 700 11px system-ui, 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; letter-spacing: 0; text-anchor: middle; }
+      .cloth-a { fill: url(#clothA); stroke: var(--ink); stroke-width: 3; }
+      .cloth-b { fill: url(#clothB); stroke: var(--ink); stroke-width: 3; }
+      .weight { fill: var(--weight); stroke: var(--ink); stroke-width: 3; }
+      .loom-face { fill: var(--loom-face); stroke: var(--ink); stroke-width: 4; }
+      .beam { stroke: var(--ink); stroke-linecap: round; stroke-width: 9; fill: none; }
+      .shuttle { fill: var(--shuttle); stroke: var(--ink); stroke-width: 3; }
+      .hub { fill: var(--hub); }
+      .spoke { opacity: .55; stroke: var(--spoke); stroke-width: 5; fill: none; }
+      .gold-line { stroke: var(--brass); stroke-width: 4; fill: none; }
+      .heddle { stroke: var(--ink); stroke-width: 8; fill: none; }
+      .ink-fill { fill: var(--ink); }
+      :root {
+        --ink: #40516f;
+        --note: #465166;
+        --panel: #f7fbff;
+        --fill: #d9ecff;
+        --card: #fff3bf;
+        --wood: #a95f3b;
+        --metal: #bfccd2;
+        --brass: #d9a13d;
+        --thread: #738994;
+        --weight: #688c98;
+        --loom-face: #fff9e9;
+        --shuttle: #bd6242;
+        --hub: #fff8e5;
+        --spoke: #8e5925;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #d8e4f0;
+          --note: #9aabbe;
+          --panel: #1e2438;
+          --fill: #243044;
+          --card: #3d3420;
+          --wood: #8a4e32;
+          --metal: #6a7a84;
+          --brass: #e0b056;
+          --thread: #8aa0b0;
+          --weight: #7ea0ac;
+          --loom-face: #2a3148;
+          --shuttle: #c56e4e;
+          --hub: #3a3424;
+          --spoke: #e0b056;
+        }
+        #clothA rect { fill: #c9a65a; }
+        #clothA path { stroke: #e07a72; }
+        #clothB rect { fill: #4a9aaa; }
+        #clothB path { stroke: #cfeee6; }
+      }
+    </style>
+  </defs>
+  <rect
+     class="panel"
+     x="22"
+     y="25"
+     width="410"
+     height="350"
+     rx="20"
+     id="rect3" />
+  <rect
+     class="panel"
+     x="468"
+     y="25"
+     width="410"
+     height="350"
+     rx="20"
+     id="rect4" />
+  <text
+     class="label"
+     x="227"
+     y="66"
+     id="text4">नियत कंप्यूटर</text>
+  <text
+     class="label"
+     x="673"
+     y="66"
+     id="text5">प्रोग्राम योग्य कंप्यूटर</text>
+  <!-- A fixed-purpose beam balance: procedure embodied in structure -->
+  <g
+     filter="url(#softShadow)"
+     id="g36">
+    <path
+       class="wood"
+       d="M76 270h302l-15 32H91Z"
+       id="path5" />
+    <path
+       class="metal"
+       d="M205 143h44l15 127h-74Z"
+       id="path6" />
+    <path
+       class="detail"
+       d="m 227,108.85331 v 34.14018"
+       id="path7" />
+    <path
+       class="beam"
+       d="M79 142h298"
+       id="path8" />
+    <path
+       class="detail"
+       d="M103 148v66M353 148v66"
+       id="path10" />
+    <path
+       class="metal"
+       d="M69 214h68l-9 14H78ZM319 214h68l-9 14h-50Z"
+       id="path11" />
+    <path
+       class="detail"
+       d="M79 211q24-41 48 0M329 211q24-41 48 0"
+       id="path12" />
+    <rect
+       x="91"
+       y="181"
+       width="25"
+       height="30"
+       rx="3"
+       class="weight"
+       id="rect12" />
+    <rect
+       x="340"
+       y="171"
+       width="28"
+       height="40"
+       rx="3"
+       class="weight"
+       id="rect13" />
+    <!-- The former circle is now a toothed gear -->
+    <g
+       transform="translate(227 211)"
+       filter="url(#softShadow)"
+       id="g27">
+      <g
+         class="brass"
+         id="g26">
+        <circle
+           r="12"
+           class="hub"
+           id="circle26" />
+      </g>
+      <path
+         d="m -0.43764356,-40.42993 0.26042522,40.214339"
+         class="spoke"
+         id="path26"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <path
+       class="brass"
+       d="M215 113 227 98l12 15-12 13Z"
+       id="path36" />
+  </g>
+  <text
+     class="tiny"
+     x="227"
+     y="322"
+     id="text36">तंत्र = प्रक्रिया</text>
+  <text
+     class="note"
+     x="227"
+     y="351"
+     id="text37"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:normal;font-family:system-ui, sans-serif">काम बदलें → तंत्र बदलें</text>
+  <!-- Articulated punched-card program -->
+  <g
+     transform="rotate(-5,1681.9377,-5410.9998)"
+     filter="url(#softShadow)"
+     id="g52">
+    <path
+       class="card"
+       d="M 0,0 H 91 V 49 H 0 Z m 5,54 h 91 v 49 H 5 Z m 5,54 h 91 v 49 H 10 Z"
+       id="path37" />
+    <g
+       class="hole"
+       id="g51">
+      <circle
+         cx="16"
+         cy="14"
+         r="4"
+         id="circle37" />
+      <circle
+         cx="45"
+         cy="14"
+         r="4"
+         id="circle38" />
+      <circle
+         cx="74"
+         cy="14"
+         r="4"
+         id="circle39" />
+      <circle
+         cx="30"
+         cy="34"
+         r="4"
+         id="circle40" />
+      <circle
+         cx="74"
+         cy="34"
+         r="4"
+         id="circle41" />
+      <circle
+         cx="21"
+         cy="69"
+         r="4"
+         id="circle42" />
+      <circle
+         cx="50"
+         cy="69"
+         r="4"
+         id="circle43" />
+      <circle
+         cx="79"
+         cy="69"
+         r="4"
+         id="circle44" />
+      <circle
+         cx="21"
+         cy="89"
+         r="4"
+         id="circle45" />
+      <circle
+         cx="64"
+         cy="89"
+         r="4"
+         id="circle46" />
+      <circle
+         cx="26"
+         cy="123"
+         r="4"
+         id="circle47" />
+      <circle
+         cx="55"
+         cy="123"
+         r="4"
+         id="circle48" />
+      <circle
+         cx="84"
+         cy="123"
+         r="4"
+         id="circle49" />
+      <circle
+         cx="41"
+         cy="143"
+         r="4"
+         id="circle50" />
+      <circle
+         cx="84"
+         cy="143"
+         r="4"
+         id="circle51" />
+    </g>
+  </g>
+  <!-- Detailed Jacquard loom, unchanged while cards and patterns vary -->
+  <g
+     filter="url(#softShadow)"
+     id="g70"
+     transform="translate(-11.486502)">
+    <path
+       class="wood"
+       d="M 619,100 H 790 V 305 H 619 Z"
+       id="path53" />
+    <path
+       d="M 634,116 H 775 V 290 H 634 Z"
+       class="loom-face"
+       id="path54" />
+    <path
+       class="wood"
+       d="m 615,143 h 179 v 18 H 615 Z m 0,132 h 179 v 18 H 615 Z"
+       id="path55" />
+    <g
+       class="thread"
+       id="g56">
+      <path
+         d="m 644,160 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111 m 8,-111 v 111"
+         id="path56" />
+    </g>
+    <path
+       d="M 638,207 H 771"
+       class="heddle"
+       id="path57" />
+    <path
+       class="cloth-a"
+       d="m 644,212 h 120 v 48 H 644 Z"
+       id="path58" />
+    <path
+       class="cloth-b"
+       d="m 644,260 h 120 v 30 H 644 Z"
+       id="path59" />
+    <path
+       d="M 641,184 H 768"
+       class="gold-line"
+       id="path60" />
+    <path
+       d="m 658,175 h 91 l 22,9 -22,9 h -91 l -20,-9 z"
+       class="shuttle"
+       id="path61" />
+    <g
+       transform="matrix(0.43,0,0,0.43,767.70704,122.04419)"
+       class="brass"
+       id="g69">
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         id="rect61" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(45)"
+         id="rect62" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(90)"
+         id="rect63" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(135)"
+         id="rect64" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="scale(-1)"
+         id="rect65" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(-135)"
+         id="rect66" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(-90)"
+         id="rect67" />
+      <rect
+         x="-7"
+         y="-45"
+         width="14"
+         height="18"
+         transform="rotate(-45)"
+         id="rect68" />
+      <circle
+         r="32"
+         id="circle68"
+         cx="0"
+         cy="0" />
+      <circle
+         r="10"
+         class="hub"
+         id="circle69"
+         cx="0"
+         cy="0" />
+    </g>
+  </g>
+  <!-- The same loom yields visibly different fabrics -->
+  <g
+     transform="translate(806 171)"
+     id="g71">
+    <path
+       class="cloth-a"
+       d="M0 0h49v49H0Z"
+       id="path70" />
+    <path
+       class="cloth-b"
+       d="M0 61h49v49H0Z"
+       id="path71" />
+  </g>
+  <text
+     class="tiny"
+     x="534"
+     y="106"
+     id="text72"
+     style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:10px;line-height:normal;font-family:system-ui, sans-serif">छिद्रित कार्ड</text>
+  <text
+     class="tiny"
+     x="830.81842"
+     y="304"
+     id="text73"
+     style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:10px;line-height:normal;font-family:system-ui, sans-serif">नए पैटर्न</text>
+  <text
+     class="tiny"
+     x="673"
+     y="322"
+     id="text74"
+     style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:10px;line-height:normal;font-family:system-ui, sans-serif">वही करघा – नए निर्देश</text>
+  <text
+     class="note"
+     x="673"
+     y="351"
+     id="text75">कार्ड बदलें → उत्पाद बदले</text>
+  <metadata
+     id="metadata75">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>नियत और प्रोग्राम योग्य कंप्यूटर</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

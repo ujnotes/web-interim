@@ -10,11 +10,11 @@
 	<meta name='theme-color' content='#ffffff' >
 	<meta itemprop="name" content="Ujnotes" />
 <meta itemprop="description" content="A series of first person shooter video games by id software" />
-<meta itemprop="image" content="https://ujnotes.com/social.png" />
+<meta itemprop="image" content="https://ujnotes.com/computer/game/doom.jpg" />
 	<meta property="og:url" content="https://ujnotes.com/computer/game/doom" />
 <meta property="og:title" content="Doom" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="https://ujnotes.com/social.png" />
+<meta property="og:image" content="https://ujnotes.com/computer/game/doom.jpg" />
 <meta property="og:description" content="A series of first person shooter video games by id software" />
 <meta property="og:site_name" content="Ujnotes.com" />
 	<meta property="fb:app_id" content="487343071466495" />
@@ -23,13 +23,16 @@
 <meta name="twitter:site" content="@ujnotes">
 <meta name="twitter:title" content="Doom">
 <meta name="twitter:description" content="A series of first person shooter video games by id software">
-<meta name="twitter:image" content="https://ujnotes.com/social.png">
+<meta name="twitter:image" content="https://ujnotes.com/computer/game/doom.jpg">
 <meta name="twitter:creator" content="ujnotes">
 	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' >
 	<link rel='apple-touch-icon' type='image/png' href='/apple-touch-icon.png' >
 	<link rel='manifest' href='/manifest.json' >
 	<link href="https://ujnotes.com/computer/game/doom" rel='canonical' >
-		<title>A series of first person shooter video games by id software - Ujnotes</title>
+		<link rel='alternate' hreflang='en' href='https://ujnotes.com/computer/game/doom' />
+	<link rel='alternate' hreflang='hi' href='https://ujnotes.com/hi/computer/game/doom' />
+	<link rel='alternate' hreflang='x-default' href='https://ujnotes.com/computer/game/doom' />
+	<title>A series of first person shooter video games by id software - Ujnotes</title>
 <script>
 /**
 * Function that tracks a click on an outbound link in Analytics.
@@ -79,6 +82,53 @@ crossorigin='anonymous'
 document.addEventListener('DOMContentLoaded', function() {
 	if(typeof initLoad != 'undefined')
 		initLoad();
+});
+function closeCoverCredit(credit) {
+	if(!credit)
+		return;
+	credit.classList.remove('is-open');
+	var toggle = credit.querySelector('.cover-credit-toggle');
+	if(toggle)
+		toggle.setAttribute('aria-expanded', 'false');
+}
+
+function closeAllCoverCredits(except) {
+	var open = document.querySelectorAll('.cover-credit.is-open');
+	for(var i = 0; i < open.length; i++) {
+		if(open[i] !== except)
+			closeCoverCredit(open[i]);
+	}
+}
+
+function openCoverCredit(credit) {
+	if(!credit)
+		return;
+	closeAllCoverCredits(credit);
+	credit.classList.add('is-open');
+	var toggle = credit.querySelector('.cover-credit-toggle');
+	if(toggle)
+		toggle.setAttribute('aria-expanded', 'true');
+}
+
+document.addEventListener('click', function(event) {
+	var toggle = event.target.closest('.cover-credit-toggle');
+	if(toggle) {
+		var credit = toggle.closest('.cover-credit');
+		if(!credit)
+			return;
+		if(credit.classList.contains('is-open'))
+			closeCoverCredit(credit);
+		else
+			openCoverCredit(credit);
+		return;
+	}
+	if(!event.target.closest('.cover-credit'))
+		closeAllCoverCredits();
+});
+
+document.addEventListener('keydown', function(event) {
+	if(event.key === 'Escape')
+		closeAllCoverCredits();
 });
 if (window.location.hostname === 'ujnotes.local' ||
 	window.location.hostname === 'localhost' ||
@@ -427,6 +477,19 @@ ul.content-list-2, ol.content-list-2 {
 	display: inline-block
 }
 
+#nav-list.nav-list-highlight > .item_block_container {
+	animation: navigation-tile-highlight 1.6s ease-out 0.25s;
+}
+
+@keyframes navigation-tile-highlight {
+	0%, 100% {
+		box-shadow: 0 0 0 0 rgba(105, 183, 207, 0);
+	}
+	30%, 65% {
+		box-shadow: 0 0 0 4px rgba(105, 183, 207, 0.75), 0 0 18px rgba(105, 183, 207, 0.48);
+	}
+}
+
 #nav-menu-up.center-arrow > .item_block_text > div {
 	text-align: center;
 	margin: auto;
@@ -516,7 +579,11 @@ div#title-container {
 h1#title {
 	display: inline-block;
 	flex: 0 1 auto;
+	min-width: 0;
+	margin: 0;
 	max-width: calc(100% - 144px);
+	text-align: center;
+	white-space: nowrap;
 	transition: all 0.3s;
 	will-change: opacity, scaleY;
 }
@@ -526,19 +593,46 @@ h1#title {
 	align-items: center;
 	justify-content: center;
 	align-self: stretch;
-	flex: 1 1 0;
 	min-width: 44px;
 	background: transparent;
+	border: 0;
+	box-sizing: border-box;
+	font: inherit;
 	outline: none;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.article-title-nav-start,
+.article-title-nav-end {
+	display: flex;
+	align-items: stretch;
+	align-self: stretch;
+	box-sizing: border-box;
+	flex: 1 1 0;
+	min-width: 0;
 }
 
 #article-prev {
+	flex: 1 1 0;
 	justify-content: flex-start;
+	min-width: 0;
 	padding-left: 40px;
 }
 
+#article-bottom {
+	flex: 0 0 44px;
+	cursor: pointer;
+}
+
+#article-bottom .image {
+	transform: rotate(90deg) scale(0.88);
+}
+
 #article-next {
+	flex: 1 1 0;
 	justify-content: flex-end;
+	min-width: 0;
 	padding-right: 40px;
 }
 
@@ -564,6 +658,11 @@ h1#title {
 .article-title-nav:focus-visible .image {
 	opacity: 1;
 	transform: scale(1.18);
+}
+
+#article-bottom:hover .image,
+#article-bottom:focus-visible .image {
+	transform: rotate(90deg) scale(1.18);
 }
 
 .article-title-nav-disabled {
@@ -614,6 +713,14 @@ h1#title {
 
 	.article-title-nav {
 		min-width: 40px;
+	}
+
+	#article-prev {
+		padding-left: 12px;
+	}
+
+	#article-next {
+		padding-right: 12px;
 	}
 }
 
@@ -946,6 +1053,8 @@ html.dark-mode .social .image svg path {
 }
 
 html.dark-mode #site-twitter:hover path,
+html.dark-mode #site-linkedin:hover path,
+html.dark-mode #site-x:hover path,
 html.dark-mode #site-facebook:hover path,
 html.dark-mode #site-youtube:hover svg > path {
 	fill: #69b7cf;
@@ -1028,6 +1137,23 @@ html.dark-mode ::-webkit-scrollbar-thumb {
 /* Google translate element */
 html.dark-mode #google_translate_element {
 	background: transparent;
+}
+
+/* Google custom search */
+html.dark-mode #search_box,
+html.dark-mode #search_box .gsc-control-cse {
+	background: #1a1a2e;
+	border-color: #333;
+}
+
+html.dark-mode #search_box .gsc-input-box {
+	background: #224;
+	border-color: #33335a;
+}
+
+html.dark-mode #search_box input.gsc-input {
+	background-color: #224 !important;
+	color: #d0d0d0 !important;
 }
 @font-face {
 	font-family: 'Abel';
@@ -1526,6 +1652,124 @@ html[data-theme-resolved='dark'] .theme-current-icon[data-theme-icon='dark'] {
 		height: 40px !important;
 	}
 }
+/*
+ * Opt-in wide shell. Active only when html[data-layout="wide"].
+ * Classic article sites omit the attribute / use layout=classic and stay unchanged.
+ */
+
+html[data-layout="wide"] {
+	--layout-max: none;
+	--layout-header-max: none;
+	--layout-gutter: clamp(1rem, 2.8vw, 2.75rem);
+	--layout-content-inset: 2%;
+	--layout-content-width: 96%;
+	--layout-rail-max: min(1480px, calc(100vw - 3rem));
+}
+
+html[data-layout="wide"] #main-wrapper {
+	max-width: var(--layout-max);
+	width: 100%;
+	padding: 0 var(--layout-gutter);
+}
+
+html[data-layout="wide"] #header-wrapper {
+	max-width: var(--layout-header-max);
+	left: var(--layout-gutter);
+	right: var(--layout-gutter);
+}
+
+html[data-layout="wide"] #wrapper {
+	padding-bottom: 168px;
+}
+
+/* Wider reading/content column than the classic 80%/10% article gutters */
+html[data-layout="wide"] .message_left_div,
+html[data-layout="wide"] .message_right_div,
+html[data-layout="wide"] .message_center_div {
+	width: var(--layout-content-width);
+}
+
+html[data-layout="wide"] .message_center_div {
+	margin-left: var(--layout-content-inset);
+	margin-right: var(--layout-content-inset);
+}
+
+html[data-layout="wide"] #message > *,
+html[data-layout="wide"] #nav-menu_container,
+html[data-layout="wide"] #fb_components {
+	margin-left: var(--layout-content-inset);
+	width: var(--layout-content-width);
+}
+
+/* Shared width rail for marketing / landing compositions */
+html[data-layout="wide"] .layout-rail {
+	width: 100%;
+	max-width: var(--layout-rail-max);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+html[data-layout="wide"] .layout-split {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	gap: clamp(1.25rem, 3vw, 3rem);
+	align-items: center;
+}
+
+html[data-layout="wide"] .layout-split-reverse {
+	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+}
+
+html[data-layout="wide"] .layout-start {
+	justify-items: start;
+	text-align: left;
+}
+
+html[data-layout="wide"] .shadow-scroll-top,
+html[data-layout="wide"] .shadow-scroll-bottom {
+	margin-left: 8%;
+	margin-right: 8%;
+}
+
+html[data-layout="wide"] #footer-wrapper-divider {
+	margin-left: 12%;
+	margin-right: 12%;
+}
+@media (max-width: 900px) {
+	html[data-layout="wide"] .layout-split,
+	html[data-layout="wide"] .layout-split-reverse {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 540px) {
+	html[data-layout="wide"] {
+		--layout-gutter: 0.85rem;
+		--layout-content-inset: 0;
+		--layout-content-width: 100%;
+	}
+
+	html[data-layout="wide"] #main-wrapper {
+		padding: 0 !important;
+	}
+
+	html[data-layout="wide"] #header-wrapper {
+		left: 0;
+		right: 0;
+		margin: 0 4px;
+	}
+
+	html[data-layout="wide"] .message_left_div,
+	html[data-layout="wide"] .message_right_div,
+	html[data-layout="wide"] .message_center_div,
+	html[data-layout="wide"] #message > *,
+	html[data-layout="wide"] #nav-menu_container,
+	html[data-layout="wide"] #fb_components {
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 @media (max-width: 354px) {
 	#nav-list.page-list > .item_block_container {
 		float: none;
@@ -1658,6 +1902,60 @@ html[data-theme-resolved='dark'] .theme-current-icon[data-theme-icon='dark'] {
 	}
 	
 }
+/*
+ * Opt-in glass skin utilities. Active only when html[data-skin="glass"].
+ * Provides tokens + reusable classes; does not restyle the classic shell by itself.
+ * Sites compose these via adapters (e.g. CSS/Base/adapter.css).
+ */
+
+html[data-skin="glass"] {
+	--glass-bg: rgba(10, 16, 36, 0.42);
+	--glass-bg-strong: rgba(10, 16, 36, 0.62);
+	--glass-bg-soft: rgba(255, 255, 255, 0.04);
+	--glass-border: rgba(255, 255, 255, 0.12);
+	--glass-border-soft: rgba(255, 255, 255, 0.06);
+	--glass-highlight: rgba(120, 200, 255, 0.18);
+	--glass-blur: 18px;
+	--glass-radius: 18px;
+	--glass-radius-sm: 12px;
+	--glass-shadow: 0 12px 40px rgba(0, 8, 24, 0.28);
+}
+
+html[data-skin="glass"] .glass,
+html[data-skin="glass"] .glass-panel {
+	background: linear-gradient(180deg, var(--glass-bg), var(--glass-bg-soft));
+	backdrop-filter: blur(var(--glass-blur));
+	-webkit-backdrop-filter: blur(var(--glass-blur));
+	border: 1px solid var(--glass-border);
+	border-radius: var(--glass-radius);
+	box-shadow: var(--glass-shadow);
+}
+
+html[data-skin="glass"] .glass-soft {
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid var(--glass-border-soft);
+	border-radius: var(--glass-radius-sm);
+}
+
+html[data-skin="glass"] .glass-strong {
+	background: var(--glass-bg-strong);
+	backdrop-filter: blur(calc(var(--glass-blur) + 4px));
+	-webkit-backdrop-filter: blur(calc(var(--glass-blur) + 4px));
+	border: 1px solid var(--glass-border);
+	border-radius: var(--glass-radius);
+	box-shadow: var(--glass-shadow);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+	html[data-skin="glass"] .glass,
+	html[data-skin="glass"] .glass-panel,
+	html[data-skin="glass"] .glass-soft,
+	html[data-skin="glass"] .glass-strong {
+		background: rgba(12, 20, 42, 0.88);
+	}
+}
 #main-wrapper {
 	margin: -8px auto 0;
 	padding: 0 20px;
@@ -1773,29 +2071,309 @@ html[data-theme-resolved='dark'] .theme-current-icon[data-theme-icon='dark'] {
 }
 
 #home-menu {
+	--home-glyph-size: 18px;
+	--home-glyph-disc-size: 24px;
+	--home-glyph-hit-size: 32px;
+	--home-glyph-left: 10px;
+	--home-node-center-y: 73px;
+	--home-glyph-top: calc(var(--home-node-center-y) - var(--home-glyph-hit-size) / 2);
+	--home-glyph-center: 19px;
+	--home-elbow-y: var(--home-node-center-y);
+	--home-indent: 36px;
+	--home-node-width: 184px;
+	--home-line: rgba(105, 183, 207, 0.32);
+	--home-line-alt: rgba(40, 145, 190, 0.9);
+	--home-sibling-gap: 32px;
 	padding-left: 10px
 }
 
-#home-menu > div {
-	padding-left: 14px
+#home-menu .home-menu-branch + .home-menu-branch {
+	margin-top: 24px
 }
 
-#home-menu .home-menu-group-parent {
-	margin-bottom: 12px;
-	font-family: 'Roboto Condensed', Abel, sans-serif
+#home-menu .home-menu-node,
+#home-menu .home-menu-level {
+	position: relative
 }
 
-#home-menu > div > a {
-	text-decoration: none;
-	color: #aaa
+#home-menu .home-menu-level > .item_block_container {
+	position: relative;
+	z-index: 1
 }
 
-#home-menu > div.sidebar-nav-group {
-	padding-left: 28px
+#home-menu .home-menu-level {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	padding-left: var(--home-indent)
+}
+
+#home-menu .home-menu-subtree {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	box-sizing: border-box;
+	width: var(--home-subtree-width, 100%);
+	position: relative;
+	padding-left: var(--home-indent);
+	row-gap: var(--home-sibling-gap)
+}
+
+#home-menu .home-menu-subtree > .home-menu-node {
+	flex: 0 0 var(--home-node-width);
+	box-sizing: border-box;
+	min-width: 0;
+	max-width: 100%
+}
+
+#home-menu .home-menu-node:has(> .home-menu-subtree:not([hidden]))::after {
+	position: absolute;
+	z-index: 0;
+	top: var(--home-elbow-y);
+	height: calc(var(--home-line-height, 146px) + 1px);
+	left: var(--home-glyph-center);
+	border-left: 1px solid var(--home-line);
+	content: '';
+	pointer-events: none
+}
+
+#home-menu .home-menu-subtree > .home-menu-node::before,
+#home-menu .home-menu-subtree > .home-menu-level::before {
+	position: absolute;
+	z-index: 0;
+	top: var(--home-parent-elbow-y, var(--home-elbow-y));
+	left: var(--home-parent-elbow-left, calc(var(--home-glyph-center) - var(--home-indent) - 1px));
+	width: var(--home-parent-elbow-width, calc(var(--home-indent) + var(--home-indent) - var(--home-glyph-center) + 5px));
+	border-top: 1px solid var(--home-line);
+	content: ''
+}
+
+#home-menu .home-menu-group-connector > .home-menu-subtree::before {
+	position: absolute;
+	z-index: 0;
+	top: var(--home-group-elbow-y);
+	left: var(--home-group-elbow-left);
+	width: var(--home-group-elbow-width);
+	border-top: 1px solid var(--home-line);
+	content: '';
+	pointer-events: none
+}
+
+#home-menu .home-menu-group-connector > .home-menu-subtree::after {
+	position: absolute;
+	z-index: 0;
+	top: var(--home-group-spine-top);
+	left: var(--home-group-spine-x);
+	height: var(--home-group-spine-height);
+	border-left: 1px solid var(--home-line);
+	content: '';
+	pointer-events: none
+}
+
+#home-menu .home-menu-group-row-line {
+	position: absolute;
+	z-index: 0;
+	top: var(--home-group-row-line-y);
+	left: var(--home-group-row-line-left);
+	width: var(--home-group-row-line-width);
+	border-top: 1px solid var(--home-line);
+	pointer-events: none
+}
+
+#home-menu .home-menu-connector-alternate:has(> .home-menu-subtree:not([hidden]))::after,
+#home-menu .home-menu-connector-alternate > .home-menu-subtree::after {
+	border-left: 2px dashed var(--home-line-alt)
+}
+
+#home-menu .home-menu-connector-alternate > .home-menu-subtree::before,
+#home-menu .home-menu-connector-alternate > .home-menu-subtree > .home-menu-node::before,
+#home-menu .home-menu-connector-alternate > .home-menu-subtree > .home-menu-group-row-line {
+	border-top: 2px dashed var(--home-line-alt)
+}
+
+#home-menu .home-menu-group-connector > .home-menu-subtree > .home-menu-node::before {
+	content: none
+}
+
+#home-menu .home-menu-connector-bottom > .home-menu-subtree {
+	margin-top: 48px;
+	padding-left: var(--home-bottom-child-indent, var(--home-indent))
+}
+
+#home-menu .home-menu-connector-bottom:not(:has(> .home-menu-subtree:not([hidden]))) {
+	padding-bottom: calc(var(--home-glyph-hit-size) + 16px)
+}
+
+#home-menu .home-menu-connector-bottom:has(> .home-menu-subtree:not([hidden]))::after {
+	top: var(--home-bottom-line-start-y);
+	left: var(--home-bottom-line-x)
+}
+
+#home-menu .home-menu-connector-bottom > .home-menu-toggle {
+	top: var(--home-bottom-line-start-y);
+	left: calc(var(--home-bottom-line-x) - var(--home-glyph-hit-size) / 2)
+}
+
+
+
+
+
+
+
+
+#home-menu .home-menu-toggle {
+	position: absolute;
+	z-index: 2;
+	top: var(--home-glyph-top);
+	left: calc(var(--home-glyph-center) - var(--home-glyph-hit-size) / 2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: var(--home-glyph-hit-size);
+	height: var(--home-glyph-hit-size);
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	color: #69b7cf;
+	background: transparent;
+	cursor: pointer;
+	font: 500 14px/1 sans-serif;
+	transform-origin: center;
+	transition: transform .18s ease, color .18s ease
+}
+
+#home-menu .home-menu-toggle::before {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	box-sizing: border-box;
+	width: var(--home-glyph-disc-size);
+	height: var(--home-glyph-disc-size);
+	border: 1px solid transparent;
+	border-radius: 50%;
+	background: #fff;
+	content: '';
+	transform: translate(-50%, -50%);
+	transition: background .18s ease, border-color .18s ease
+}
+
+#home-menu .home-menu-toggle:hover,
+#home-menu .home-menu-toggle:focus-visible {
+	color: #4aa3c0;
+	outline: none;
+	transform: scale(1.15)
+}
+
+#home-menu .home-menu-toggle:hover::before,
+#home-menu .home-menu-toggle:focus-visible::before {
+	border-color: rgba(105, 183, 207, 0.45)
+}
+
+#home-menu .home-menu-toggle span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--home-glyph-size);
+	height: var(--home-glyph-size);
+	font-size: var(--home-glyph-size);
+	line-height: 1;
+	pointer-events: none
+}
+
+#home-menu .home-menu-toggle span:empty::before {
+	content: '\2212'
+}
+
+#home-menu .home-menu-toggle[aria-expanded='false'] span:empty::before {
+	content: '+'
+}
+
+#home-menu .home-menu-subtree[hidden] {
+	display: none
+}
+
+html.dark-mode #home-menu {
+	--home-line: rgba(105, 183, 207, 0.28);
+	--home-line-alt: rgba(105, 205, 235, 0.92)
+}
+
+html.dark-mode #home-menu .home-menu-toggle::before {
+	background: #1a1a2e
+}
+
+html.dark-mode #home-menu .home-menu-toggle:hover::before,
+html.dark-mode #home-menu .home-menu-toggle:focus-visible::before {
+	border-color: rgba(105, 183, 207, 0.5)
+}
+
+#home-menu .home-menu-subtree > .home-menu-node.home-menu-has-more {
+	overflow: visible
+}
+
+#home-menu .home-menu-tile-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+	position: relative
+}
+
+#home-menu .home-menu-more {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	box-sizing: border-box;
+	width: 14px;
+	margin: 0 0 12px -10px;
+	padding: 0;
+	gap: 2px;
+	color: #69b7cf;
+	text-decoration: none
+}
+
+#home-menu .home-menu-more span {
+	display: block;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	background: currentColor
+}
+
+#home-menu .home-menu-more:hover,
+#home-menu .home-menu-more:focus-visible {
+	color: #4aa3c0;
+	outline: none
+}
+
+html.dark-mode #home-menu .home-menu-more {
+	color: rgba(105, 205, 235, 0.92)
+}
+
+#home-image-disclaimer {
+	clear: both;
+	margin: 40px 0 0 var(--home-glyph-center);
+	max-width: 42em;
+	color: #888;
+	font-size: 11px;
+	line-height: 1.45
+}
+
+html.dark-mode #home-image-disclaimer {
+	color: #9a9a9a
 }
 @media (max-width: 540px) {
 	#home-message {
 		margin-left: auto !important
+	}
+
+	#home-menu {
+		--home-indent: 24px
 	}
 }
 #profile-image-container {
@@ -1852,6 +2430,186 @@ html.dark-mode #profile-image:focus {
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none
+}
+/* Stretch the article column so bottom nav tiles sit near the footer on short pages.
+   Long pages are unchanged. Homepage tree (#home-menu) stays in normal flow. */
+#content-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+#header-wrapper {
+	flex: 0 0 auto;
+	width: 100%;
+}
+
+#wrapper {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#main,
+#main > .container,
+#content-wrapper-inside {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+}
+
+#canvas-wrapper {
+	flex: 1 0 auto;
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+}
+
+#canvas-wrapper-inner-container {
+	min-width: 0;
+}
+
+#canvas-main {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+}
+
+#content:has(> #sub-list) > #content-body-separator {
+	margin-top: auto;
+}html.dark-mode .content-image object {
+	color-scheme: dark
+}
+
+html:not(.dark-mode) .content-image object {
+	color-scheme: light
+}
+.content-image-container:has(+ .cover-credit) {
+	margin-bottom: 8px
+}
+
+.cover-credit {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+	height: 0;
+	margin: 0 4px 0 0;
+	top: -22px;
+	z-index: 2;
+	line-height: 0;
+	pointer-events: none
+}
+
+.content-image-container:has(.cover-image-tile) + .cover-credit {
+	justify-content: center;
+	margin-right: 0;
+	transform: translateX(94px)
+}
+
+.cover-credit-anchor {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	pointer-events: auto
+}
+
+.cover-credit-toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: #69b7cf;
+	opacity: 0.62;
+	cursor: pointer;
+	line-height: 0
+}
+
+.cover-credit-toggle:hover,
+.cover-credit-toggle:focus-visible,
+.cover-credit.is-open .cover-credit-toggle {
+	opacity: 0.9;
+	outline: none
+}
+
+.cover-credit-popup {
+	position: absolute;
+	top: 50%;
+	right: calc(100% + 6px);
+	left: auto;
+	transform: translateY(-50%);
+	width: max-content;
+	max-width: min(340px, 70vw);
+	padding: 6px 8px;
+	border-radius: 6px;
+	background: rgba(255, 255, 255, 0.96);
+	box-shadow: 0 1px 8px rgba(64, 81, 111, 0.16);
+	color: #40516f;
+	font-size: 12px;
+	line-height: 1.4;
+	text-align: right;
+	white-space: normal;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	z-index: 3;
+	transition: opacity 0.12s ease
+}
+
+.cover-credit.is-open .cover-credit-popup {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto
+}
+
+.content-image-container:has(.cover-image-tile) + .cover-credit .cover-credit-popup {
+	right: auto;
+	left: calc(100% + 6px);
+	text-align: left
+}
+
+html.dark-mode .cover-credit-popup {
+	background: rgba(28, 28, 52, 0.96);
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+	color: #9aa8bd
+}
+.cover-image-tile {
+	height: auto;
+	width: 160px;
+	margin: 8px auto 12px;
+	padding-bottom: 0;
+	background: #f6f6f6;
+	box-shadow: none;
+}
+
+.cover-image-tile img {
+	width: 160px;
+	height: 110px;
+	object-fit: contain;
+	object-position: center;
+	border-radius: 4px;
+	display: block;
+}
+
+html.dark-mode .cover-image-tile {
+	background: #222244;
+	box-shadow: none;
+}
+
+.item_block_image_contain {
+	object-fit: contain;
 }
 #footer-wrapper {
 	margin-top: -186px;
@@ -2022,7 +2780,8 @@ html.dark-mode #profile-image:focus {
 						<div class='shadow-scroll-top'></div>
 						<div id='translation-controls' class='hide_display'>
 							<div id='language-switcher'>
-</div>
+		<a href='/hi/computer/game/doom' class='lang-link'>हिन्दी</a>
+	</div>
 							<div id='google_translate_element'></div>
 						</div>
 						<div id='search_box'><div class="gcse-search"></div></div>
@@ -2036,22 +2795,36 @@ html.dark-mode #profile-image:focus {
 			Game		</a>
 		<span class='path-separator'>\</span>
 </div></div>
-														<div id='title-container' class="">
-								<a id='article-prev' class='article-title-nav XURL article-title-nav-disabled'
-									 aria-label='No previous article' aria-disabled='true' tabindex='-1'>
-									<span class='image'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+														<div id='title-container' class=""
+								data-nav-prev="Previous article"
+								data-nav-next="Next article"
+								data-nav-prev-none="No previous article"
+								data-nav-next-none="No next article">
+								<div class='article-title-nav-start'>
+									<a id='article-prev' class='article-title-nav XURL article-title-nav-disabled'
+										 aria-label='No previous article' aria-disabled='true' tabindex='-1'>
+										<span class='image'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
 	<path fill='#69b7cf' d='M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z' />
 </svg>
 </span>
-								</a>
+									</a>
+								</div>
 								<h1 id='title'>Doom</h1>
-								<a id='article-next' class='article-title-nav XURL article-title-nav-disabled'
-									 aria-label='No next article' aria-disabled='true' tabindex='-1'>
-									<span class='image'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+								<div class='article-title-nav-end'>
+									<button id='article-bottom' class='article-title-nav' type='button' title='Jump to page navigation' aria-label='Jump to page navigation' onclick='return scrollToArticleNavigation()'>
+										<span class='image'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
 	<path fill='#69b7cf' d='M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z' />
 </svg>
 </span>
-								</a>
+									</button>
+									<a id='article-next' class='article-title-nav XURL article-title-nav-disabled'
+										 aria-label='No next article' aria-disabled='true' tabindex='-1'>
+										<span class='image'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+	<path fill='#69b7cf' d='M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z' />
+</svg>
+</span>
+									</a>
+								</div>
 							</div>
 							<div id='canvas-wrapper-inner-container'>
 								<div id='nav-menu'>
@@ -2059,12 +2832,12 @@ html.dark-mode #profile-image:focus {
 		<div class='sidebar-nav-li sidebar-sub'>
 			<div  class='sidebar-nav-group page-list'>
 <a
-	class='XURL item_block_container' href='/' data-target='root' data-title=''>
-<img class='item_block_image item_block_image_visible' src='/root.svg' loading='lazy' alt="Navigation - link to root"><div class='item_block_text'><div>home</div></div></a><a
+	class='XURL item_block_container' href='/' data-target='root' data-title='home'>
+<img class='item_block_image item_block_image_visible item_block_image_contain' src='/root.svg' loading='lazy' alt="Navigation - link to root"><div class='item_block_text'><div>home</div></div></a><a
 	class='XURL item_block_container' href='/world' data-target='world' data-title='World'>
-<img class='item_block_image item_block_image_visible' src='/world/index.jpg' loading='lazy' alt="Navigation - link to world"><div class='item_block_text'><div>World</div></div></a><a
+<img class='item_block_image item_block_image_visible' src='/world.jpg' loading='lazy' alt="Navigation - link to world"><div class='item_block_text'><div>World</div></div></a><a
 	class='XURL item_block_container' href='/computer' data-target='computer' data-title='Computer'>
-<img class='item_block_image item_block_image_visible' src='/computer/index.jpg' loading='lazy' alt="Navigation - link to computer"><div class='item_block_text'><div>Computer</div></div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
+<img class='item_block_image item_block_image_visible' src='/computer.jpg' loading='lazy' alt="Navigation - link to computer"><div class='item_block_text'><div>Computer</div></div></a><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div><div class='sidebar-nav-norm item_block-placeholder'></div></div>
 <div class='sidebar-nav-group page-list'>
 			<a class="XURL item_block" href='/about' data-target='about' data-title='About'><div>About</div></a>
 			<a class="XURL item_block" href='/faq' data-target='faq' data-title='FAQ'><div>FAQ</div></a>
@@ -2087,22 +2860,35 @@ html.dark-mode #profile-image:focus {
 								<div id='canvas-main'>
 									<div id='content'>
 										<div id='message'>
-	<h2 class='center'>A series of first person shooter video games by id software</h2>
-	<p>
-	</p>
+		<div class='content-image-container'>
+	<div class='cover-image' style='padding-bottom: 68.76%'>
+		<img src='/computer/game/doom.jpg' alt='A series of first person shooter video games by id software'>
+	</div>
 </div>
+
+	<h2 class='center'>A series of first person shooter video games by id software</h2>
+		<p>
+		Doom is id Software's first-person shooter series, beginning in 1993. These notes follow the series down to the 2016 reboot and the demo that shipped with Vulkan support.
+	</p>
+	<h3>Copyright and fair-use notice</h3>
+	<p>
+		The Doom image used on this page is copyrighted by its respective owner. It is reproduced in a limited, non-commercial, informational context under fair use. No ownership is claimed.
+	</p>
+
+</div>
+
 <div id='updated-container'>
 	<div id='updated'>
 		Updated:
 		<span id='date'>
-			2024 May 21		</span>
+			2026 Aug 19		</span>
 	</div>
 </div>
 <div class='center' id='content-body-separator'></div>
 <div id='sub-list' class='center page-list'>
 <a
 	class='XURL item_block_container' href='/computer/game/doom/2016' data-target='computer/game/doom/2016' data-title='Doom 2016'>
-<img class='item_block_image item_block_image_visible' src='/resource/placeholder.svg' loading='lazy' alt="Navigation - link to computer/game/doom/2016"><div class='item_block_text'><div>Doom 2016</div></div></a></div>
+<img class='item_block_image item_block_image_visible' src='/computer/game/doom/2016.jpg' loading='lazy' alt="Navigation - link to computer/game/doom/2016"><div class='item_block_text'><div>Doom 2016</div></div></a></div>
 <div id='fb_components'>
 	<div class="fb-comments"
   data-href="https://ujnotes.com/computer/game/doom"
@@ -2125,7 +2911,7 @@ html.dark-mode #profile-image:focus {
 			class='item_block-disabled sidebar-nav-norm sidebar-nav-l-1' >
 		&nbsp;
 		</a><a id='nav-menu-up' class='XURL item_block_container ' href='/computer/game' data-target='computer/game' data-title='Game'>
-		<img class='item_block_image ' loading='lazy' src='/computer/game/index.jpg ' alt='Navigation - up level tile'><div class='item_block_text'><div>Game</div><div class='arrow'>&#x25B2;</div></div>
+		<img class='item_block_image ' loading='lazy' src='/computer/game.jpg ' alt='Navigation - up level tile'><div class='item_block_text'><div>Game</div><div class='arrow'>&#x25B2;</div></div>
 	</a> </div>
 									</div>
 								</div>
@@ -2147,11 +2933,8 @@ html.dark-mode #profile-image:focus {
 			<div class='social grow'>
 				<a href='https://twitter.com/ujnotesx' id='site-twitter' onclick="trackOutboundLink('ujnotes-twitter', 'https://twitter.com/ujnotesx'); return false;"><div class='image'><svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
 	 viewBox="0 0 76 76">
-	<path fill='#D9D9D9' d="M76,14.4c-2.8,1.2-5.8,2.1-9,2.5c3.2-1.9,5.7-5,6.9-8.6c-3,1.8-6.3,3.1-9.9,3.8c-2.8-3-6.9-4.9-11.4-4.9
-		C44,7.1,37,14.1,37,22.7c0,1.2,0.1,2.4,0.4,3.6C24.5,25.6,13,19.4,5.3,10c-1.3,2.3-2.1,5-2.1,7.8c0,5.4,2.8,10.2,6.9,13
-		c-2.6-0.1-5-0.8-7.1-2c0,0.1,0,0.1,0,0.2c0,7.6,5.4,13.9,12.5,15.3c-1.3,0.4-2.7,0.5-4.1,0.5c-1,0-2-0.1-2.9-0.3
-		c2,6.2,7.7,10.7,14.6,10.8c-5.3,4.2-12.1,6.7-19.4,6.7c-1.3,0-2.5-0.1-3.7-0.2c6.9,4.4,15.1,7,23.9,7c28.7,0,44.4-23.8,44.4-44.4
-		c0-0.7,0-1.3,0-2C71.3,20.3,73.9,17.6,76,14.4z" />
+	<path fill='#D9D9D9' transform='translate(3 3) scale(2.9166667)' d="M18.901,1.153h3.68l-8.04,9.19L24,22.847h-7.406l-5.8-7.584l-6.638,7.584H0.474l8.494-9.71L0,1.154h7.594l5.243,6.932
+		L18.901,1.153z M17.609,20.646h2.039L6.486,3.24H4.298L17.609,20.646z" />
 </svg>
 </div></a>
 			</div>

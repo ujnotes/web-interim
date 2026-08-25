@@ -40,25 +40,22 @@
 	<loc>http://ujnotes.com/world/philosophy/solution</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/computer</loc>
+	<loc>https://ujnotes.com/computer</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/computer/program</loc>
+	<loc>https://ujnotes.com/computer/program</loc>
 </url>
 <url>
 	<loc>http://ujnotes.com/computer/programming</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/computer/os</loc>
+	<loc>https://ujnotes.com/computer/os</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/computer/game</loc>
+	<loc>https://ujnotes.com/computer/game</loc>
 </url>
 <url>
-	<loc>http://ujnotes.com/computer/game/doom/2016/demo/issue/vulkan_crash</loc>
-</url>
-<url>
-	<loc>http://ujnotes.com/computer/os</loc>
+	<loc>https://ujnotes.com/computer/game/doom/2016/demo/issue/vulkan_crash</loc>
 </url>
 <url>
 	<loc>http://ujnotes.com/about</loc>
@@ -114,4 +111,149 @@
 		<xhtml:link rel="alternate" hreflang="hi" href="https://ujnotes.com/hi/world/philosophy/hindu" />
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://ujnotes.com/world/philosophy/hindu" />
 	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy/hindu/hindu_atheist</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy/hindu/advaita</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy/hindu/charvaka</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/world/philosophy/hindu/advaita</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/world/philosophy/hindu/hindu_atheist</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/world/philosophy/hindu/charvaka</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/license</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/license</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/about</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/about</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/faq</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/faq</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/feedback</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/feedback</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/logo</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/logo</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/roadmap</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/roadmap</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/changelog</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/changelog</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/timeline</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/timeline</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/about_site</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/about_site</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/root</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/world</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/computer</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/computer</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/about_me</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/about_me</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/world/philosophy</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/computer/game</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/hi/computer/game</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy/information</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy/learning</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy/model</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy/algorithm</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy/program</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy/artificial-intelligence</loc>
+	</url>
+	<url>
+		<loc>https://ujnotes.com/world/philosophy/decision</loc>
+	</url>
+<url>
+	<loc>https://ujnotes.com/computer/game/doom</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/game/doom/2016</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/game/doom/2016/demo</loc>
+</url>
+
+<url>
+	<loc>https://ujnotes.com/computer/game/doom/2016/demo/issue</loc>
+</url>
+
 </urlset>

@@ -517,6 +517,7 @@ h1#title {
 	display: inline-block;
 	flex: 0 1 auto;
 	max-width: calc(100% - 144px);
+	white-space: nowrap;
 	transition: all 0.3s;
 	will-change: opacity, scaleY;
 }
@@ -614,6 +615,14 @@ h1#title {
 
 	.article-title-nav {
 		min-width: 40px;
+	}
+
+	#article-prev {
+		padding-left: 12px;
+	}
+
+	#article-next {
+		padding-right: 12px;
 	}
 }
 
@@ -1028,6 +1037,23 @@ html.dark-mode ::-webkit-scrollbar-thumb {
 /* Google translate element */
 html.dark-mode #google_translate_element {
 	background: transparent;
+}
+
+/* Google custom search */
+html.dark-mode #search_box,
+html.dark-mode #search_box .gsc-control-cse {
+	background: #1a1a2e;
+	border-color: #333;
+}
+
+html.dark-mode #search_box .gsc-input-box {
+	background: #224;
+	border-color: #33335a;
+}
+
+html.dark-mode #search_box input.gsc-input {
+	background-color: #224 !important;
+	color: #d0d0d0 !important;
 }
 @font-face {
 	font-family: 'Abel';
@@ -2060,7 +2086,7 @@ html.dark-mode #profile-image:focus {
 		<div class='sidebar-nav-li sidebar-sub'>
 			<div  class='sidebar-nav-group page-list'>
 <a
-	class='XURL item_block_container' href='/' data-target='root' data-title=''>
+	class='XURL item_block_container' href='/' data-target='root' data-title='home'>
 <img class='item_block_image item_block_image_visible' src='/root.svg' loading='lazy' alt="Navigation - link to root"><div class='item_block_text'><div>home</div></div></a><a
 	class='XURL item_block_container' href='/world' data-target='world' data-title='World'>
 <img class='item_block_image item_block_image_visible' src='/world/index.jpg' loading='lazy' alt="Navigation - link to world"><div class='item_block_text'><div>World</div></div></a><a
